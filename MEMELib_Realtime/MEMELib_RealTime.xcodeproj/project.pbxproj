@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		350F8B8B199B389A0020859E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B7C199B389A0020859E /* AdSupport.framework */; };
+		350F8B8E199B389A0020859E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B7F199B389A0020859E /* MobileCoreServices.framework */; };
+		350F8B8F199B389A0020859E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B80199B389A0020859E /* StoreKit.framework */; };
+		350F8B90199B389A0020859E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B81199B389A0020859E /* SystemConfiguration.framework */; };
+		350F8B91199B389A0020859E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B82199B389A0020859E /* Accounts.framework */; };
+		350F8B92199B389A0020859E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B83199B389A0020859E /* Security.framework */; };
+		350F8B93199B389A0020859E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B84199B389A0020859E /* CoreLocation.framework */; };
+		350F8B94199B389A0020859E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B85199B389A0020859E /* Social.framework */; };
+		350F8B95199B389A0020859E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B86199B389A0020859E /* AudioToolbox.framework */; };
+		350F8B96199B389A0020859E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B87199B389A0020859E /* CFNetwork.framework */; };
+		35541A861AD2A488005C7FE0 /* MEMELib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35541A851AD2A488005C7FE0 /* MEMELib.framework */; };
+		35541A8A1AD2A4B7005C7FE0 /* MEMELib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35541A851AD2A488005C7FE0 /* MEMELib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		35EEC0FB1998BF6800E70760 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EEC0FA1998BF6800E70760 /* Foundation.framework */; };
+		35EEC0FD1998BF6800E70760 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EEC0FC1998BF6800E70760 /* CoreGraphics.framework */; };
+		35EEC0FF1998BF6800E70760 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EEC0FE1998BF6800E70760 /* UIKit.framework */; };
+		35EEC1051998BF6800E70760 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35EEC1031998BF6800E70760 /* InfoPlist.strings */; };
+		35EEC1071998BF6800E70760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EEC1061998BF6800E70760 /* main.m */; };
+		35EEC10B1998BF6800E70760 /* MMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EEC10A1998BF6800E70760 /* MMAppDelegate.m */; };
+		35EEC10E1998BF6800E70760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35EEC10C1998BF6800E70760 /* Main.storyboard */; };
+		35EEC1111998BF6800E70760 /* MMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EEC1101998BF6800E70760 /* MMViewController.m */; };
+		35EEC1131998BF6800E70760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EEC1121998BF6800E70760 /* Images.xcassets */; };
+		35EEC1331998BF8200E70760 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EEC1321998BF8200E70760 /* CoreBluetooth.framework */; };
+		35F741A21AC9882A007C83CC /* MMDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F741A11AC9882A007C83CC /* MMDataViewController.m */; };
+		C4433B731B63636500426D50 /* us.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433B721B63636500426D50 /* us.mp3 */; };
+		C4433B751B636D0300426D50 /* hi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433B741B636D0300426D50 /* hi.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		35D049901AD2876200D4E6AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				35541A8A1AD2A4B7005C7FE0 /* MEMELib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		350F8B7C199B389A0020859E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		350F8B7D199B389A0020859E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		350F8B7E199B389A0020859E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		350F8B7F199B389A0020859E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		350F8B80199B389A0020859E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		350F8B81199B389A0020859E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		350F8B82199B389A0020859E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		350F8B83199B389A0020859E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		350F8B84199B389A0020859E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		350F8B85199B389A0020859E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		350F8B86199B389A0020859E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		350F8B87199B389A0020859E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		350F8B88199B389A0020859E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35541A851AD2A488005C7FE0 /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MEMELib.framework; path = ../MEMELib.framework; sourceTree = "<group>"; };
+		35EEC0F71998BF6800E70760 /* MEMELib_RealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMELib_RealTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35EEC0FA1998BF6800E70760 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		35EEC0FC1998BF6800E70760 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		35EEC0FE1998BF6800E70760 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		35EEC1021998BF6800E70760 /* MEMELib_RealTime-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MEMELib_RealTime-Info.plist"; sourceTree = "<group>"; };
+		35EEC1041998BF6800E70760 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		35EEC1061998BF6800E70760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35EEC1081998BF6800E70760 /* MEMELib_RealTime-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MEMELib_RealTime-Prefix.pch"; sourceTree = "<group>"; };
+		35EEC1091998BF6800E70760 /* MMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAppDelegate.h; sourceTree = "<group>"; };
+		35EEC10A1998BF6800E70760 /* MMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAppDelegate.m; sourceTree = "<group>"; };
+		35EEC10D1998BF6800E70760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		35EEC10F1998BF6800E70760 /* MMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
+		35EEC1101998BF6800E70760 /* MMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MMViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		35EEC1121998BF6800E70760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35EEC1191998BF6900E70760 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		35EEC1321998BF8200E70760 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		35F741A01AC9882A007C83CC /* MMDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDataViewController.h; sourceTree = "<group>"; };
+		35F741A11AC9882A007C83CC /* MMDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDataViewController.m; sourceTree = "<group>"; };
+		C4433B721B63636500426D50 /* us.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = us.mp3; sourceTree = "<group>"; };
+		C4433B741B636D0300426D50 /* hi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hi.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		35EEC0F41998BF6800E70760 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EEC0FD1998BF6800E70760 /* CoreGraphics.framework in Frameworks */,
+				350F8B91199B389A0020859E /* Accounts.framework in Frameworks */,
+				35541A861AD2A488005C7FE0 /* MEMELib.framework in Frameworks */,
+				350F8B96199B389A0020859E /* CFNetwork.framework in Frameworks */,
+				350F8B93199B389A0020859E /* CoreLocation.framework in Frameworks */,
+				35EEC0FF1998BF6800E70760 /* UIKit.framework in Frameworks */,
+				350F8B94199B389A0020859E /* Social.framework in Frameworks */,
+				350F8B92199B389A0020859E /* Security.framework in Frameworks */,
+				35EEC1331998BF8200E70760 /* CoreBluetooth.framework in Frameworks */,
+				350F8B90199B389A0020859E /* SystemConfiguration.framework in Frameworks */,
+				350F8B95199B389A0020859E /* AudioToolbox.framework in Frameworks */,
+				350F8B8E199B389A0020859E /* MobileCoreServices.framework in Frameworks */,
+				350F8B8F199B389A0020859E /* StoreKit.framework in Frameworks */,
+				35EEC0FB1998BF6800E70760 /* Foundation.framework in Frameworks */,
+				350F8B8B199B389A0020859E /* AdSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35EEC0EE1998BF6800E70760 = {
+			isa = PBXGroup;
+			children = (
+				35EEC1001998BF6800E70760 /* MEMELib_Sample */,
+				35EEC0F91998BF6800E70760 /* Frameworks */,
+				35EEC0F81998BF6800E70760 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		35EEC0F81998BF6800E70760 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35EEC0F71998BF6800E70760 /* MEMELib_RealTime.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35EEC0F91998BF6800E70760 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35541A851AD2A488005C7FE0 /* MEMELib.framework */,
+				350F8B82199B389A0020859E /* Accounts.framework */,
+				350F8B7C199B389A0020859E /* AdSupport.framework */,
+				350F8B86199B389A0020859E /* AudioToolbox.framework */,
+				350F8B7E199B389A0020859E /* CFNetwork.framework */,
+				35EEC1321998BF8200E70760 /* CoreBluetooth.framework */,
+				350F8B88199B389A0020859E /* CoreGraphics.framework */,
+				350F8B7D199B389A0020859E /* CoreLocation.framework */,
+				35EEC0FA1998BF6800E70760 /* Foundation.framework */,
+				350F8B7F199B389A0020859E /* MobileCoreServices.framework */,
+				350F8B83199B389A0020859E /* Security.framework */,
+				350F8B85199B389A0020859E /* Social.framework */,
+				350F8B80199B389A0020859E /* StoreKit.framework */,
+				350F8B81199B389A0020859E /* SystemConfiguration.framework */,
+				35EEC0FE1998BF6800E70760 /* UIKit.framework */,
+				35EEC1191998BF6900E70760 /* XCTest.framework */,
+				350F8B84199B389A0020859E /* CoreLocation.framework */,
+				350F8B87199B389A0020859E /* CFNetwork.framework */,
+				35EEC0FC1998BF6800E70760 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35EEC1001998BF6800E70760 /* MEMELib_Sample */ = {
+			isa = PBXGroup;
+			children = (
+				C4433B741B636D0300426D50 /* hi.mp3 */,
+				35EEC1121998BF6800E70760 /* Images.xcassets */,
+				35EEC10C1998BF6800E70760 /* Main.storyboard */,
+				35EEC1091998BF6800E70760 /* MMAppDelegate.h */,
+				35EEC10A1998BF6800E70760 /* MMAppDelegate.m */,
+				35F741A01AC9882A007C83CC /* MMDataViewController.h */,
+				35F741A11AC9882A007C83CC /* MMDataViewController.m */,
+				35EEC10F1998BF6800E70760 /* MMViewController.h */,
+				35EEC1101998BF6800E70760 /* MMViewController.m */,
+				35EEC1011998BF6800E70760 /* Supporting Files */,
+				C4433B721B63636500426D50 /* us.mp3 */,
+			);
+			path = MEMELib_Sample;
+			sourceTree = "<group>";
+		};
+		35EEC1011998BF6800E70760 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				35EEC1021998BF6800E70760 /* MEMELib_RealTime-Info.plist */,
+				35EEC1031998BF6800E70760 /* InfoPlist.strings */,
+				35EEC1061998BF6800E70760 /* main.m */,
+				35EEC1081998BF6800E70760 /* MEMELib_RealTime-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35EEC0F61998BF6800E70760 /* MEMELib_RealTime.temp_caseinsensitive_rename */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35EEC1291998BF6900E70760 /* Build configuration list for PBXNativeTarget "MEMELib_RealTime.temp_caseinsensitive_rename" */;
+			buildPhases = (
+				35EEC0F31998BF6800E70760 /* Sources */,
+				35EEC0F41998BF6800E70760 /* Frameworks */,
+				35EEC0F51998BF6800E70760 /* Resources */,
+				35D049901AD2876200D4E6AE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MEMELib_RealTime.temp_caseinsensitive_rename;
+			productName = MEME_Test;
+			productReference = 35EEC0F71998BF6800E70760 /* MEMELib_RealTime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		35EEC0EF1998BF6800E70760 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MM;
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "JINS MEME";
+				TargetAttributes = {
+					35EEC0F61998BF6800E70760 = {
+						DevelopmentTeam = L7ME6MQ64J;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 35EEC0F21998BF6800E70760 /* Build configuration list for PBXProject "MEMELib_RealTime" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 35EEC0EE1998BF6800E70760;
+			productRefGroup = 35EEC0F81998BF6800E70760 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35EEC0F61998BF6800E70760 /* MEMELib_RealTime.temp_caseinsensitive_rename */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35EEC0F51998BF6800E70760 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4433B751B636D0300426D50 /* hi.mp3 in Resources */,
+				C4433B731B63636500426D50 /* us.mp3 in Resources */,
+				35EEC1131998BF6800E70760 /* Images.xcassets in Resources */,
+				35EEC1051998BF6800E70760 /* InfoPlist.strings in Resources */,
+				35EEC10E1998BF6800E70760 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35EEC0F31998BF6800E70760 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35EEC10B1998BF6800E70760 /* MMAppDelegate.m in Sources */,
+				35EEC1111998BF6800E70760 /* MMViewController.m in Sources */,
+				35F741A21AC9882A007C83CC /* MMDataViewController.m in Sources */,
+				35EEC1071998BF6800E70760 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		35EEC1031998BF6800E70760 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35EEC1041998BF6800E70760 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		35EEC10C1998BF6800E70760 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35EEC10D1998BF6800E70760 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		35EEC1271998BF6900E70760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		35EEC1281998BF6900E70760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		35EEC12A1998BF6900E70760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MEMELib_Sample/MEMELib_RealTime-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "MEMELib_Sample/MEMELib_RealTime-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = MEMELib_RealTime;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		35EEC12B1998BF6900E70760 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MEMELib_Sample/MEMELib_RealTime-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "MEMELib_Sample/MEMELib_RealTime-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = MEMELib_RealTime;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35EEC0F21998BF6800E70760 /* Build configuration list for PBXProject "MEMELib_RealTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EEC1271998BF6900E70760 /* Debug */,
+				35EEC1281998BF6900E70760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		35EEC1291998BF6900E70760 /* Build configuration list for PBXNativeTarget "MEMELib_RealTime.temp_caseinsensitive_rename" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35EEC12A1998BF6900E70760 /* Debug */,
+				35EEC12B1998BF6900E70760 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 35EEC0EF1998BF6800E70760 /* Project object */;
+}

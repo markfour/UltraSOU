@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7 ]><html lang="ja" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="ja" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="ja" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ja-JP" itemscope itemtype="http://schema.org/Product"><!--<![endif]-->
+<head>
+
+<link rel="shortcut icon" href="/img/common/favicon.ico">
+<title>JINS MEME DEVELOPER IDEA PITCH CONTEST | JINS MEME DEVELOPERS | JINS</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ▽CSS▽ -->
+<link href="../css/import.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="resource">
+<div id="static-header">
+
+	<div class="container">
+
+		<a id="logo" href="ios_index.html"><img src="../img/logo.png"></a>
+
+		<ul id="header-nav">
+
+			<li class="ja normal"><a href="../ja/ios_index.html">JP</a></li>
+
+			<li class="en active"><a href="#">EN</a></li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+<div id="grobal-container">
+	<div class="row resource">
+		<div class="container">
+			<ul id="resource-nav">
+				<li><a href="ios_index.html">START GUIDE</a></li>
+				<li class="active"><a href="#">API REFERENCE</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row white">
+		<div class="container resource">
+			
+			<div id="api-frame" class="ios">
+				
+				<div id="api-class-list">
+				  <h2>Classes</h2>
+				  <ul>
+				    <li class="class01"><a href="api_ios_meme_lib.html">MemeLib</a></li>
+				    <li class="class02 active"><a href="api_ios_meme_lib_delegate.html">MemeLibDelegate</a></li>
+				    <li class="class03"><a href="api_ios_meme_standard_data.html">MemeStandardData</a></li>
+				    <li class="class04"><a href="api_ios_meme_realtime_data.html">MemeRealtimeData</a></li>
+				  </ul>
+  
+				  <h2>Data Types</h2>
+				  <ul>
+				    <li class="class05"><a href="api_ios_meme_status.html">MemeStatus</a></li>
+				    <li class="class06"><a href="api_ios_meme_data_mode.html">MemeDataMode</a></li>
+				    <li class="class07"><a href="api_ios_meme_sleepy_result.html">MemeSleepyResult</a></li>
+				    <li class="class08"><a href="api_ios_meme_focus_result.html">MemeFocusResult</a></li>
+				  </ul>
+				</div>
+				
+				<div id="api-class-body" target=".class02">
+					<h1>MemeLibDelegate</h1>
+					<div class="description">
+						<p>
+              Provides delegate for receiving responses from JINS MEME
+						</p>
+					</div>
+					<div class="metadata">
+						<div class="col">
+							<div class="title">Inheritance</div>
+							<hr/>
+							<div>
+								NSObject<br/>
+								&nbsp;&nbsp;&nbsp;↳MemeLibDelegate
+							</div>
+						</div>
+						<div class="col">
+							<div class="title">Confirms To</div>
+							<hr/>
+							<div>
+								NSObject
+							</div>
+						</div>
+						<div class="col">
+							<div class="title">Availability</div>
+							<hr/>
+							<div>
+								Available in iOS 7.0 and later.
+							</div>
+						</div>
+					</div>
+					
+          <div class="detail">
+            <a>- memeAppAuthorized:</a><span class="type">optional</span>
+            <div id="memeAppAuthorized" class="desc-container">
+              <div class="desc-header"></div>
+              <div class="desc">
+                <div class="point"></div>
+                <p>
+                  Delegate for authorization result
+                </p>
+                <h3>Declaration</h3>
+                <pre><code class="lang-objc">- (void)memeAppAuthorized:(MemeStatus)memeStatus</code></pre>
+                <h3>Parameters</h3>
+                <table class="param">
+                  <tr>
+                    <td class="type">MemeStatus</td>
+                    <td>Authorization result (ref. <a href="api_ios_meme_status.html">MemeStatus</a>)</td>
+                  </tr>
+                </table>
+                <h3>Return Value</h3>
+                <p>
+                  n/a
+                </p>
+                <h3>Availability</h3>
+                <p>Available in iOS 7.0 and later.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="detail">
+            <a>- memePeripheralFound:</a><span class="type">optional</span>
+            <div id="memePeripheralFound" class="desc-container">
+              <div class="desc-header"></div>
+              <div class="desc">
+                <div class="point"></div>
+                <p>
+                  Delegate for scanning result
+                </p>
+                <h3>Declaration</h3>
+                <pre><code class="lang-objc">- (void)memePeripheralFound:(CBPeripheral *)peripheral</code></pre>
+                <h3>Parameters</h3>
+                <table class="param">
+                  <tr>
+                    <td class="type">CBPeripheral</td>
+                    <td>Scanned JINS MEME</td>
+                  </tr>
+                </table>
+                <h3>Return Value</h3>
+                <p>
+                  n/a
+                </p>
+                <h3>Availability</h3>
+                <p>Available in iOS 7.0 and later.</p>
+              </div>
+            </div>
+          </div>
+					
+
+					<div class="detail">
+						<a>- memePeripheralConnected:</a><span class="type">optional</span>
+						<div id="memePeripheralConnected" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+									Delegate for connection
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (void)memePeripheralConnected:(CBPeripheral *)peripheral</code></pre>
+								<h3>Parameters</h3>
+                <table class="param">
+                  <tr>
+                    <td class="type">CBPeripheral</td>
+                    <td>Connected JINS MEME</td>
+                  </tr>
+                </table>
+								<h3>Return Value</h3>
+								<p>
+									n/a
+								</p>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="detail">
+						<a>- memePeripheralDisconneted:</a><span class="type">optional</span>
+						<div id="memePeripheralDisconneted" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  deleate for disconnection
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (void)memePeripheralDisconneted:(CBPeripheral *)peripheral</code></pre>
+								<h3>Parameters</h3>
+                <table class="param">
+                  <tr>
+                    <td class="type">CBPeripheral</td>
+                    <td>Disconnected JINS MEME</td>
+                  </tr>
+                </table>
+								<h3>Return Value</h3>
+								<p>
+									n/a
+								</p>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- memeDataModeChanged:</a><span class="type">optional</span>
+						<div id="memeDataModeChanged" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  Delagate for changes in data mode
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (void)memeDataModeChanged:(MemeDataMode)memeDataMode</code></pre>
+								<h3>Parameters</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeDataMode</td>
+										<td>Ref. <a href="api_ios_meme_data_mode.html">MemeDataMode</a></td>
+									</tr>
+								</table>
+								<h3>Return Value</h3>
+								<p>
+									n/a
+								</p>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- memeStandardModeDataReceived:</a><span class="type">optional</span>
+						<div id="memeStandardModeDataReceived" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  Delegate for standard mode data
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (void)memeStandardModeDataReceived:(MemeStandardData *)memeStandardData</code></pre>
+								<h3>Parameters</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeStandardData</td>
+										<td>Ref. <a href="api_ios_meme_standard_data.html">MemeStandardData</a></td>
+									</tr>
+								</table>
+								<h3>Return Value</h3>
+								<p>
+									n/a
+								</p>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- memeRealTimeModeDataReceived:</a><span class="type">optional</span>
+						<div id="memeRealTimeModeDataReceived" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  Delegate for realtime mode data
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (void)memeRealTimeModeDataReceived:(MemeRealtimeData *)memeRealtimeData</code></pre>
+								<h3>Parameters</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeRealtimeData</td>
+										<td>Ref. <a href="api_ios_meme_realtime_data.html">MemeRealtimeData</a></td>
+									</tr>
+								</table>
+								<h3>Return Value</h3>
+								<p>
+									n/a
+								</p>
+
+								<h3>Availability</h3>
+
+								<p>Available in iOS 7.0 and later.</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+	
+</div>
+
+<div id="static-footer">
+	<div class="container">
+		<ul id="footer-nav">
+			<li>&copy; JIN CO.,LTD. ALL Rights Reserved.</li>
+			<li><a href="https://www.jins-jp.com/jinsmeme/">JINS MEME</a></li>
+			<li><a href="http://www.jins-jp.com/">JINS</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

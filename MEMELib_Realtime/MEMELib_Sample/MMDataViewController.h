@@ -1,0 +1,24 @@
+//
+//  MMDataViewController.h
+//  MEMELib_Sample
+//
+//  Created by JINS MEME on 2015/03/30.
+//  Copyright (c) 2015 JINS MEME. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <MEMELib/MEMELib.h>
+#import <AVFoundation/AVFoundation.h>
+
+@class MMViewController;
+
+@interface MMDataViewController : UITableViewController
+{
+bool isVertival;
+}
+- (void) memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
+
+@property (strong, nonatomic) AVAudioPlayer *auidoIntro;
+@property (strong, nonatomic) AVAudioPlayer *audioHai;
+
+@end

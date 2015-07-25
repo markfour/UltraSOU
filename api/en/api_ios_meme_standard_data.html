@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7 ]><html lang="ja" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="ja" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="ja" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ja-JP" itemscope itemtype="http://schema.org/Product"><!--<![endif]-->
+<head>
+
+<link rel="shortcut icon" href="/img/common/favicon.ico">
+<title>JINS MEME DEVELOPER IDEA PITCH CONTEST | JINS MEME DEVELOPERS | JINS</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ▽CSS▽ -->
+<link href="../css/import.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="resource">
+<div id="static-header">
+
+	<div class="container">
+
+		<a id="logo" href="ios_index.html"><img src="../img/logo.png"></a>
+
+		<ul id="header-nav">
+
+			<li class="ja normal"><a href="../ja/ios_index.html">JP</a></li>
+
+			<li class="en active"><a href="#">EN</a></li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+<div id="grobal-container">
+	<div class="row resource">
+		<div class="container">
+			<ul id="resource-nav">
+				<li><a href="ios_index.html">START GUIDE</a></li>
+				<li class="active"><a href="#">API REFERENCE</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row white">
+		<div class="container resource">
+			
+			<div id="api-frame" class="ios">
+				
+				<div id="api-class-list">
+				  <h2>Classes</h2>
+				  <ul>
+				    <li class="class01"><a href="api_ios_meme_lib.html">MemeLib</a></li>
+				    <li class="class02"><a href="api_ios_meme_lib_delegate.html">MemeLibDelegate</a></li>
+				    <li class="class03 active"><a href="api_ios_meme_standard_data.html">MemeStandardData</a></li>
+				    <li class="class04"><a href="api_ios_meme_realtime_data.html">MemeRealtimeData</a></li>
+				  </ul>
+  
+				  <h2>Data Types</h2>
+				  <ul>
+				    <li class="class05"><a href="api_ios_meme_status.html">MemeStatus</a></li>
+				    <li class="class06"><a href="api_ios_meme_data_mode.html">MemeDataMode</a></li>
+				    <li class="class07"><a href="api_ios_meme_sleepy_result.html">MemeSleepyResult</a></li>
+				    <li class="class08"><a href="api_ios_meme_focus_result.html">MemeFocusResult</a></li>
+				  </ul>
+				</div>
+				
+				<div id="api-class-body" target=".class03">
+					<h1>MemeStandardData</h1>
+					<div class="description">
+						<p>
+              Definition of response data while JINS MEME is in Standard Mode
+						</p>
+					</div>
+					<div class="metadata">
+						<div class="col">
+							<div class="title">Inheritance</div>
+							<hr/>
+							<div>
+								NSObject<br/>
+								&nbsp;&nbsp;&nbsp;↳MemeStandardData
+							</div>
+						</div>
+						<div class="col">
+							<div class="title">Confirms To</div>
+							<hr/>
+							<div>
+								NSObject
+							</div>
+						</div>
+						<div class="col">
+							<div class="title">Availability</div>
+							<hr/>
+							<div>
+								Available in iOS 7.0 and later.
+							</div>
+						</div>
+					</div>
+					
+        	<div class="detail">
+        		<a>eyeMoveBigHorizontal</a><span class="type">Property</span>
+        		<div id="eyeMoveBigHorizontal" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Total Number of Big Eye Movement (Right and Left, 1 min)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 eyeMoveBigHorizontal</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>eyeMoveBigVertical</a><span class="type">Property</span>
+        		<div id="eyeMoveBigVertical" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Total Number of Big Eye Movement (Up and Down, 1 min)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 eyeMoveBigVertical</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>eyeMoveHorizontal</a><span class="type">Property</span>
+        		<div id="eyeMoveHorizontal" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Total Number of Eye Movement (Right and Left, 1 min)<br/>*Still under developmenrt (Value is currently zero)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 eyeMoveHorizontal</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>eyeMoveVertical</a><span class="type">Property</span>
+        		<div id="eyeMoveVertical" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Total Number of Eye Movement (Up and Down, 1 min)<br/>*Still under developmenrt (Value is currently zero)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 eyeMoveVertical</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>EOGNoiseDuration</a><span class="type">Property</span>
+        		<div id="EOGNoiseDuration" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Noise Duration (per munite)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 EOGNoiseDuration</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numBlinks</a><span class="type">Property</span>
+        		<div id="numBlinks" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Number of Blinks (per min)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numBlinks</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numBlinkBurst</a><span class="type">Property</span>
+        		<div id="numBlinkBurst" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Number of Consecutive Blinks (per min)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numBlinkBurst</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>blinkSpeed</a><span class="type">Property</span>
+        		<div id="blinkSpeed" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Averaged Blink Speed (1 min)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 blinkSpeed</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>blinkStrength</a><span class="type">Property</span>
+        		<div id="blinkStrength" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Averaged Blink Strength (1 min)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 blinkStrength</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>blinkIntervalAvg</a><span class="type">Property</span>
+        		<div id="blinkIntervalAvg" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Averaged Blink Interval
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 blinkIntervalAvg</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>sleepy</a><span class="type">Property</span>
+        		<div id="sleepy" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Sleepiness Level
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) <a href="api_ios_meme_sleepy_result.html">MemeSleepyResult</a> sleepy</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>focus</a><span class="type">Property</span>
+        		<div id="focus" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Focus Level
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) <a href="api_ios_meme_focus_result.html">MemeFocusResult</a> focus</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>cadence</a><span class="type">Property</span>
+        		<div id="cadence" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Number of Steps (1 min)<br/>*Still under developmenrt (Value is currently zero)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 cadence</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>bodyMoveVertical</a><span class="type">Property</span>
+        		<div id="bodyMoveVertical" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Body Sway during walking (up/down)<br/>*Still under developmenrt (Value is currently zero)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 bodyMoveVertical</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps280</a><span class="type">Property</span>
+        		<div id="numSteps280" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 280 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps280</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps310</a><span class="type">Property</span>
+        		<div id="numSteps310" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 310 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps310</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps340</a><span class="type">Property</span>
+        		<div id="numSteps340" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 340 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps340</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps370</a><span class="type">Property</span>
+        		<div id="numSteps370" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 370 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps370</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps400</a><span class="type">Property</span>
+        		<div id="numSteps400" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 400 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps400</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps430</a><span class="type">Property</span>
+        		<div id="numSteps430" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 430 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps430</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps460</a><span class="type">Property</span>
+        		<div id="numSteps460" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 460 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps460</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps500</a><span class="type">Property</span>
+        		<div id="numSteps500" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 500 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps500</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps530</a><span class="type">Property</span>
+        		<div id="numSteps530" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 530 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps530</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps560</a><span class="type">Property</span>
+        		<div id="numSteps560" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 560 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps560</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps590</a><span class="type">Property</span>
+        		<div id="numSteps590" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 590 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps590</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps620</a><span class="type">Property</span>
+        		<div id="numSteps620" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 620 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps620</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps650</a><span class="type">Property</span>
+        		<div id="numSteps650" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 650 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps650</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps680</a><span class="type">Property</span>
+        		<div id="numSteps680" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 680 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps680</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps710</a><span class="type">Property</span>
+        		<div id="numSteps710" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 710 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps710</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps750</a><span class="type">Property</span>
+        		<div id="numSteps750" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 750 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps750</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps780</a><span class="type">Property</span>
+        		<div id="numSteps780" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 780 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps780</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps810</a><span class="type">Property</span>
+        		<div id="numSteps810" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 810 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps810</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps840</a><span class="type">Property</span>
+        		<div id="numSteps840" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 840 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps840</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps870</a><span class="type">Property</span>
+        		<div id="numSteps870" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 870 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps870</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps900</a><span class="type">Property</span>
+        		<div id="numSteps900" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 900 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps900</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps930</a><span class="type">Property</span>
+        		<div id="numSteps930" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 930 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps930</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps960</a><span class="type">Property</span>
+        		<div id="numSteps960" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 960 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps960</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps1000</a><span class="type">Property</span>
+        		<div id="numSteps1000" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of steps ( 1000 pace )
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps1000</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numSteps</a><span class="type">Property</span>
+        		<div id="numSteps" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  total steps of above values
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 numSteps</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>rollAvg</a><span class="type">Property</span>
+        		<div id="rollAvg" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Averaged Body Sway during walking (right/left)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) float rollAvg</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>pitchAvg</a><span class="type">Property</span>
+        		<div id="pitchAvg" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Averaged Body Sway during walking (forward/backward)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) float pitchAvg</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>rollDiff</a><span class="type">Property</span>
+        		<div id="rollDiff" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Body Sway during walking (right/left)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) float rollDiff</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>pitchDiff</a><span class="type">Property</span>
+        		<div id="pitchDiff" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Body Sway during walking (forward/backward)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) float pitchDiff</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>footholdRight</a><span class="type">Property</span>
+        		<div id="footholdRight" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Stepping Cycle (left foot)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 footholdRight</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>footholdLeft</a><span class="type">Property</span>
+        		<div id="footholdLeft" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Stepping Cycle (right foot)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 footholdLeft</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>sittingPostureIndices</a><span class="type">Property</span>
+        		<div id="sittingPostureIndices" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Body Sway during sitting
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8* sittingPostureIndices</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>numStoredData</a><span class="type">Property</span>
+        		<div id="numStoredData" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  number of data stored in JINS MEME<br/>*Still under developmenrt (Value is currently zero)
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt16 numStoredData</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>capturedAt</a><span class="type">Property</span>
+        		<div id="capturedAt" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  timestamp
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) NSDate capturedAt</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>fitError</a><span class="type">Property</span>
+        		<div id="fitError" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Fitting Status
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 fitError</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>powerLeft</a><span class="type">Property</span>
+        		<div id="powerLeft" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  Battery Usage
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) UInt8 powerLeft</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>isCurrent</a><span class="type">Property</span>
+        		<div id="isCurrent" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  api.ios.std_data.b_current.desc
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) BOOL isCurrent</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="detail">
+        		<a>isEOGValid</a><span class="type">Property</span>
+        		<div id="isEOGValid" class="desc-container">
+        			<div class="desc-header"></div>
+        			<div class="desc">
+        				<div class="point"></div>
+        				<p>
+                  api.ios.std_data.is_eog_valid.desc
+        				</p>
+        				<h3>Declaration</h3>
+        				<pre><code class="lang-objc">@property(readonly) BOOL isEOGValid</code></pre>
+        				<h3>Availability</h3>
+        				<p>Available in iOS 7.0 and later.</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div id="static-footer">
+	<div class="container">
+		<ul id="footer-nav">
+			<li>&copy; JIN CO.,LTD. ALL Rights Reserved.</li>
+			<li><a href="https://www.jins-jp.com/jinsmeme/">JINS MEME</a></li>
+			<li><a href="http://www.jins-jp.com/">JINS</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

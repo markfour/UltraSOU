@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7 ]><html lang="ja" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="ja" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="ja" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ja-JP" itemscope itemtype="http://schema.org/Product"><!--<![endif]-->
+<head>
+
+<link rel="shortcut icon" href="/img/common/favicon.ico">
+<title>JINS MEME DEVELOPER IDEA PITCH CONTEST | JINS MEME（ミーム） DEVELOPERS | JINS - 眼鏡（メガネ・めがね）</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ▽CSS▽ -->
+<link href="../css/import.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="resource">
+<div id="static-header">
+
+	<div class="container">
+
+		<a id="logo" href="ios_index.html"><img src="../img/logo.png"></a>
+
+		<ul id="header-nav">
+
+			<li class="ja active"><a href="#">JP</a></li>
+
+			<li class="en normal"><a href="../en/ios_index.html">EN</a></li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+<div id="grobal-container">
+	<div class="row resource">
+		<div class="container">
+			<ul id="resource-nav">
+				<li><a href="ios_index.html">スタートガイド</a></li>
+				<li class="active"><a href="#">APIリファレンス</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="row white">
+		<div class="container resource">
+			
+			<div id="api-frame" class="ios">
+				
+				<div id="api-class-list">
+				  <h2>Classes</h2>
+				  <ul>
+				    <li class="class01 active"><a href="api_ios_meme_lib.html">MemeLib</a></li>
+				    <li class="class02"><a href="api_ios_meme_lib_delegate.html">MemeLibDelegate</a></li>
+				    <li class="class03"><a href="api_ios_meme_standard_data.html">MemeStandardData</a></li>
+				    <li class="class04"><a href="api_ios_meme_realtime_data.html">MemeRealtimeData</a></li>
+				  </ul>
+  
+				  <h2>Data Types</h2>
+				  <ul>
+				    <li class="class05"><a href="api_ios_meme_status.html">MemeStatus</a></li>
+				    <li class="class06"><a href="api_ios_meme_data_mode.html">MemeDataMode</a></li>
+				    <li class="class07"><a href="api_ios_meme_sleepy_result.html">MemeSleepyResult</a></li>
+				    <li class="class08"><a href="api_ios_meme_focus_result.html">MemeFocusResult</a></li>
+				  </ul>
+				</div>
+				
+				<div id="api-class-body" target=".class01">
+					<h1>MemeLib</h1>
+					<div class="description">
+						<p>
+              JINS MEMEのスキャン、接続、各コマンドの実行手段を提供します。<br/>JINS MEMEからのレスポンスは<a href="api_ios_meme_lib_delegate.html">MemeLibDelegate</a>を介して取得できます。
+						</p>
+						<div class="note">
+							<div class="title">NOTE</div>
+							<p>
+                setAppClientIDでアプリID / アプリSecretを必ず設定してください。<br/>設定しない限り、認証が行われずMemeLibは動作しません。
+							</p>
+						</div>
+					</div>
+					<div class="metadata">
+						<div class="col">
+							<div class="title">Inheritance</div>
+							<hr/>
+							<div>
+								NSObject<br/>
+								&nbsp;&nbsp;&nbsp;↳MemeLib
+							</div>
+						</div>
+						<div class="col">
+							<div class="title">Confirms To</div>
+							<hr/>
+							<div>
+								NSObject
+							</div>
+						</div>
+						<div class="col">
+							<div class="title">Availability</div>
+							<hr/>
+							<div>
+								Available in iOS 7.0 and later.
+							</div>
+						</div>
+					</div>
+					
+					<div class="detail">
+						<a>- setAppClientID:ClientHash:</a>
+						<div id="setAppClientID" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  アプリ認証とSDK認証を行います。
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (void)setAppClientID:(NSString *)ClientId
+ClientHash:(NSString *)ClientHash</code></pre>
+								<h3>Parameters</h3>
+								<table class="param">
+									<tr>
+										<td class="type">ClientId</td>
+										<td>JINS MEME アプリ登録で発行されるアプリID</td>
+									</tr>
+									<tr>
+										<td class="type">ClientHash</td>
+										<td>JINS MEME アプリ登録で発行されるアプリSecret</td>
+									</tr>
+								</table>
+								<h3>Return Value</h3>
+								<p>
+									なし
+								</p>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="detail">
+						<a>- isConnected:</a>
+						<div id="isConnected" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  JINS MEMEに接続済みかどうかを返します。
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (BOOL)isConnected</code></pre>
+								<h3>Parameters</h3>
+								<p>
+									なし
+								</p>
+								<h3>Return Value</h3>
+								<table class="param">
+									<tr>
+										<td class="type">true</td>
+										<td>接続済み</td>
+									</tr>
+									<tr>
+										<td class="type">false</td>
+										<td>未接続</td>
+									</tr>
+								</table>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- getDataMode:</a>
+						<div id="getDataMode" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+									現在の通信モードを取得します。
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (MemeDataMode)getDataMode</code></pre>
+								<h3>Parameters</h3>
+								<p>
+									なし
+								</p>
+								<h3>Return Value</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeDataMode</td>
+										<td><a href="api_ios_meme_data_mode.html">MemeDataMode</a>を参照</td>
+									</tr>
+								</table>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- startScanningPeripherals:</a>
+						<div id="startScanningPeripherals" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  JINS MEMEのスキャンを開始します。
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (MemeStatus)startScanningPeripherals</code></pre>
+								<h3>Parameters</h3>
+								<p>
+									なし
+								</p>
+								<h3>Return Value</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeStatus</td>
+										<td><a href="api_ios_meme_status.html">MemeStatus</a>を参照</td>
+									</tr>
+								</table>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- connectPeripheral:</a>
+						<div id="connectPeripheral" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+									JINS MEMEと接続します。
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (MemeStatus)connectPeripheral:(CBPeripheral *)</code></pre>
+								<h3>Parameters</h3>
+								<table class="param">
+									<tr>
+										<td class="type">CBPeripheral</td>
+										<td>接続するJINS MEMEのCBPeripheralオブジェクト</td>
+									</tr>
+								</table>
+								<h3>Return Value</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeStatus</td>
+										<td><a href="api_ios_meme_status.html">MemeStatus</a>を参照</td>
+									</tr>
+								</table>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- diconnectPeripheral:</a>
+						<div id="diconnectPeripheral" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  JINS MEMEとの接続を切断します。
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (MemeStatus)diconnectPeripheral</code></pre>
+								<h3>Parameters</h3>
+								<table class="param">
+									<tr>
+										<td class="type">CBPeripheral</td>
+										<td>切断するJINS MEMEのCBPeripheralオブジェクト</td>
+									</tr>
+								</table>
+								<h3>Return Value</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeStatus</td>
+										<td><a href="api_ios_meme_status.html">MemeStatus</a>を参照</td>
+									</tr>
+								</table>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="detail">
+						<a>- changeDataMode:</a>
+						<div id="changeDataMode" class="desc-container">
+							<div class="desc-header"></div>
+							<div class="desc">
+								<div class="point"></div>
+								<p>
+                  JINS MEMEのデータモードを変更します。
+								</p>
+								<h3>Declaration</h3>
+								<pre><code class="lang-objc">- (MemeStatus)changeDataMode:(MemeDataMode)memeDataMode</code></pre>
+								<h3>Parameters</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeDataMode</td>
+										<td><a href="api_ios_meme_data_mode.html">MemeDataMode</a>を参照</td>
+									</tr>
+								</table>
+								<h3>Return Value</h3>
+								<table class="param">
+									<tr>
+										<td class="type">MemeStatus</td>
+										<td><a href="api_ios_meme_status.html">MemeStatus</a>を参照</td>
+									</tr>
+								</table>
+								<h3>Availability</h3>
+								<p>Available in iOS 7.0 and later.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+	
+</div>
+
+<div id="static-footer">
+	<div class="container">
+		<ul id="footer-nav">
+			<li>&copy; JIN CO.,LTD. ALL Rights Reserved.</li>
+			<li><a href="https://www.jins-jp.com/jinsmeme/">JINS MEME</a></li>
+			<li><a href="http://www.jins-jp.com/">JINS</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

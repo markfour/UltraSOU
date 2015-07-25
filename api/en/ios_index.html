@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7 ]><html lang="ja" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="ja" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="ja" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ja-JP" itemscope itemtype="http://schema.org/Product"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="Looking for great minds to change the world with JINS MEME." />
+<meta name="Keywords" content="JINS,JINS,JNS,JINZ,JNZ,JIN's,JIN's GLOBAL STANDARD,ジンズ,メガネ,眼鏡,めがね,アイウェア,アイウエア,フレーム,サングラス,MEME,JINS MEME,JINS MEME,ACADEMIC,アカデミック" />
+<!-- facebook  OG -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="JINS MEME DEVELOPER IDEA PITCH CONTEST | JINS MEME DEVELOPERS | JINS" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://developers.jins.com/en/idea_pitch.html" />
+<meta property="og:image" content="http://academic.jins.com/img/common.share.png" />
+<meta property="og:site_name" content="JINS MEME DEVELOPERS" />
+<meta property="fb:app_id" content="430545706975307" />
+<meta property="og:description" content="Looking for great minds to change the world with JINS MEME." />
+
+<link rel="shortcut icon" href="/img/common/favicon.ico">
+<title>JINS MEME DEVELOPER IDEA PITCH CONTEST | JINS MEME DEVELOPERS | JINS</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ▽CSS▽ -->
+<link href="../css/import.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="resource">
+<div id="static-header">
+
+	<div class="container">
+
+		<a id="logo" href="ios_index.html"><img src="../img/logo.png"></a>
+
+		<ul id="header-nav">
+
+			<li class="ja normal"><a href="../ja/ios_index.html">JP</a></li>
+
+			<li class="en active"><a href="#">EN</a></li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+<div id="grobal-container">
+	<div class="row resource">
+		<div class="row resource">
+			<div class="container">
+				<ul id="resource-nav">
+					<li class="active"><a href="#">START GUIDE</a></li>
+					<li><a href="api_ios_meme_lib.html">API REFERENCE</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row white">
+		<div class="container resource">
+			<h3 class="section-title">Welcome to JINS MEME SDK</h3>
+			<p class="resource-text">
+				To help you to download JINS MEME SDK and start programming your application(s) which interacts with JINS MEME, the following guidance provides you with the overview of SDK and how it works.<br/>You won't need to understand the specifications of Bluetooth 4.0 completely, yet some specific BLE words are found in this document.<br/>JINS MEME SDK requires CoreBluetooth framework. Please add this framework to your project on XCode.
+			</p>
+			<h3 class="section-title">About Application Authorization</h3>
+			<p class="resource-text">
+				Both App ID and App Secret are required to develop your own application(s). Please create your JINS account and <a href='https://developers.jins.com/app/create'>create app</a> to get your APP ID and App Secret.<br/>Once you've got your App ID and App Secret, please pass them to "setAppClientId method of MEMELib" as parameters. By doing so, validation of your SDK and authorization will be completed. Without this authorization, MEMELib won't work.
+			</p>
+			<h3 class="section-title">DataMode in JINS MEME</h3>
+			<p class="resource-text">
+				JINS MEME has 2 data modes: Standard Mode and Realtime Mode.<br/>In Standard Mode, JINS MEME sends data once per minute for lower power consumption. This mode is optimized for longer-time data analyses rather than realtime interactive applications.<br/>In Realtime Mode, JINS MEME sends data at roughly 26Hz. This mode suits applications that require “instant” data acquisition and analyses while increasing JINS MEME power consumption instead.<br/>The application in Realtime Mode needs to stay on foreground, and data mode can be changed by "MEMELib's changeDataMode".
+			</p>
+			<h3 class="section-title">Data List</h3>
+			<h4 class="section-subtitle">Realtime mode</h4>
+			<table class='resource-table'><thead><tr><th width='300'>Name</th><th>Description</th></tr></thead><tbody><tr><td>eyeMoveUp</td><td>Integer Value of EyeMoveUp <br/>0:Undetected<br/>1:Detected<br/>2:Detected MoveUp above threshhold<br/>3:Detected with opposite movement</td></tr><tr><td>eyeMoveDown</td><td>Integer Value of EyeMoveDown <br/>0:Undetected<br/>1:Detected<br/>2:Detected MoveDown above threshhold<br/>3:Detected with opposite movement</td></tr><tr><td>eyeMoveLeft</td><td>Integer Value of EyeMoveLeft <br/>0:Undetected<br/>1:Detected<br/>2:Detected EyeMoveLeft above threshhold<br/>3:Detected with opposite movement</td></tr><tr><td>eyeMoveRight</td><td>Integer Value of EyeMoveRight<br/>0:Undetected<br/>1:Detected<br/>2:Detected EyeMoveRight above threshhold<br/>3:Detected with opposite movement</td></tr><tr><td>blinkSpeed</td><td>Blink Speed</td></tr><tr><td>blinkStrength</td><td>Blink Strength</td></tr><tr><td>walking</td><td>Detected as walking when heels touch on the ground ( true when detected )</td></tr><tr><td>roll</td><td>Euler angle (roll )</td></tr><tr><td>pitch</td><td>Euler angle ( pitch )</td></tr><tr><td>yaw</td><td>Euler angle ( yaw )</td></tr><tr><td>accX</td><td>Accelaration sensor value (X) : 1byte ( -128 ~ 127)</td></tr><tr><td>accY</td><td>Accelaration sensor value (Y): 1byte ( -128 ~ 127)</td></tr><tr><td>accZ</td><td>Accelaration sensor value (Z): 1byte ( -128 ~ 127)</td></tr><tr><td>fitError</td><td>Integer value of JINS MEME fitting status<br/>0:NO ERROR<br/>1：left nose pad fitting error<br/>2：right nose pad fitting error<br/>3：bridge electrode fitting error</td></tr><tr><td>powerLeft</td><td>Remaining battery.<br/>0：charging<br/>1：low battery<br/>2：Lv2<br/>3：Lv3 <br/>4：Lv4<br/>5：fully charged</td></tr></tbody></table>
+			<h4 class="section-subtitle">Standard mode</h4>
+			<table class='resource-table'><thead><tr><th width='200'>Name</th><th>Description</th></tr></thead><tbody><tr><td>eyeMoveBigHorizontal</td><td>Total numbers of eye movements above threshhold per minute (Left / Right)</td></tr><tr><td>eyeMoveBigVertical</td><td>Total numbers of eye movements above exceed threshhold per minute (Up / Down)</td></tr><tr><td>eyeMoveHorizontal</td><td>Total numbers of eye movements below threshhold per minute (Left / Right)</td></tr><tr><td>eyeMoveVertical</td><td>Total numbers of eye movements below exceed threshhold per minute (Up / Down)</td></tr><tr><td>EOGNoiseDuration</td><td>Duration of Electrooculography data being not properly detected</td></tr><tr><td>numBlinks</td><td>Number of blinks per minute</td></tr><tr><td>numBlinkBurst</td><td>Number of blinks per minute that have less than one second from the previous blink</td></tr><tr><td>blinkSpeed</td><td>Averaged blink speed per minute</td></tr><tr><td>blinkStrength</td><td>Averaged blink strength per minute</td></tr><tr><td>blinkIntervalAvg</td><td>Averaged intervals of blinks per minute</td></tr><tr><td>sleepy</td><td>Sleepiness Level<br/>0: No Data<br/>1: Not Sleepy<br/>2: A Little Sleepy<br/>3: Very Sleepy</td></tr><tr><td>focus</td><td>Focus Level<br/>0: No Data<br/>1: Not Focused<br/>2: A Little Focused<br/>3: Very Focused</td></tr><tr><td>cadence</td><td>Number of steps taken per minute</td></tr><tr><td>bodyMoveVertical</td><td>Averaged body sway during walking (up/down) per minute</td></tr><tr><td>numSteps280</td><td>Number of steps with intervals less than 280 ms from the previous step</td></tr><tr><td>numSteps310</td><td>Number of steps with intervals 280 <= n < 310 ms from the previous step</td></tr><tr><td>numSteps340</td><td>Number of steps with intervals 310 <= n < 340 ms from the previous step</td></tr><tr><td>numSteps370</td><td>Number of steps with intervals 340 <= n < 470 ms from the previous step</td></tr><tr><td>numSteps400</td><td>Number of steps with intervals 370 <= n < 400 ms from the previous step</td></tr><tr><td>numSteps430</td><td>Number of steps with intervals 400 <= n < 430 ms from the previous step</td></tr><tr><td>numSteps460</td><td>Number of steps with intervals 430 <= n < 460 ms from the previous step</td></tr><tr><td>numSteps500</td><td>Number of steps with intervals 460 <= n < 500 ms from the previous step</td></tr><tr><td>numSteps530</td><td>Number of steps with intervals 500 <= n < 530 ms from the previous step</td></tr><tr><td>numSteps560</td><td>Number of steps with intervals 530 <= n < 560 ms from the previous step</td></tr><tr><td>numSteps590</td><td>Number of steps with intervals 560 <= n < 590 ms from the previous step</td></tr><tr><td>numSteps620</td><td>Number of steps with intervals 590 <= n < 620 ms from the previous step</td></tr><tr><td>numSteps650</td><td>Number of steps with intervals 620 <= n < 650 ms from the previous step</td></tr><tr><td>numSteps680</td><td>Number of steps with intervals 650 <= n < 680 ms from the previous step</td></tr><tr><td>numSteps710</td><td>Number of steps with intervals 680 <= n < 710 ms from the previous step</td></tr><tr><td>numSteps750</td><td>Number of steps with intervals 710 <= n < 750 ms from the previous step</td></tr><tr><td>numSteps780</td><td>Number of steps with intervals 750 <= n < 780 ms from the previous step</td></tr><tr><td>numSteps810</td><td>Number of steps with intervals 780 <= n < 810 ms from the previous step</td></tr><tr><td>numSteps840</td><td>Number of steps with intervals 810 <= n < 840 ms from the previous step</td></tr><tr><td>numSteps870</td><td>Number of steps with intervals 840 <= n < 870 ms from the previous step</td></tr><tr><td>numSteps900</td><td>Number of steps with intervals 870 <= n < 900 ms from the previous step</td></tr><tr><td>numSteps930</td><td>Number of steps with intervals 900 <= n < 930 ms from the previous step</td></tr><tr><td>numSteps960</td><td>Number of steps with intervals 930 <= n < 960 ms from the previous step</td></tr><tr><td>numSteps1000</td><td>Number of steps with intervals 960 <= n < 1000 ms from the previous step</td></tr><tr><td>numSteps</td><td>Total steps taken (= sum of above values)</td></tr><tr><td>rollAvg</td><td>Average of body axis ( right(+) / left(-) ) during walking. For example, your body sways to by +5 degrees (to the right) and -8 degrees (to the left), hence by -3 degrees (to the left) on average while walking.</td></tr><tr><td>pitchAvg</td><td>Average of body axis ( forward(+) / backword(-) ) during walking. For example, your body sways to by +5 degrees (forward) and -8 degrees (backword), hence by -3 degrees (backword) on average while walking.</td></tr><tr><td>rollDiff</td><td>Difference of body axis ( right (+) / left (-) ) during walking. For example, your body sways by +5 degrees (to the right) and by -8 degrees, hence 13 degree difference while walking.</td></tr><tr><td>pitchDiff</td><td>Difference of body axis ( forward (+) / backward (-) ) during walking. For example, your body sways by +5 degrees (forward) and by -8 degrees (backward), hence 13 degree difference while walking.</td></tr><tr><td>footholdRight</td><td>Averaged interval of left steps from the previous left steps</td></tr><tr><td>footholdLeft</td><td>Averaged interval of right steps from the previous right steps</td></tr><tr><td>sittingPostureIndices</td><td>integer values of head's position while sitting.</td></tr><tr><td>numStoredData</td><td>Number of data not sent from JINS MEME to the paired smartphone for any reasons - i.e. Standard Mode data can not be sent from JINS MEME while Realtime Mode App is on foreground.</td></tr><tr><td>capturedAt</td><td>Timestanp when each data window (=1 min) has got completed within JINS MEME</td></tr><tr><td>fitError</td><td>Integer value of JINS MEME fitting status<br/>0: NO ERROR<br/>1: left nose pad fitting error<br/>2: right nose pad fitting error<br/>3: bridge electrode fitting error</td></tr><tr><td>powerLeft</td><td>Remaining battery.<br/>0: charging<br/>1: low battery<br/>2: Lv2<br/>3: Lv3 <br/>4: Lv4<br/>5: fully charged</td></tr><tr><td>isCurrent</td><td>Shows if the data is current one</td></tr><tr><td>isEOGValid</td><td>
+Electrooculography data invalid due to certain amount of noise</td></tr></tbody></table>
+			<h3 class="section-title">About data storage in JINS MEME</h3>
+			<p class="resource-text">
+				JINS MEME has a function to store data of Standard Mode in its local storage. Even if data can not be sent to user's smartphone for some reasons, Standard Mode data for 16 hours can be stored in its storage.<br/>Below three are the cases.<br/>• When the data mode is in Realtime.<br/>• While JINS MEME is on, it is not connected to the application of user's smartphone.<br/>• The application is not working correctly.<br/>Once JINS MEME has recovered from the reasons above, JINS MEME restarts to send the stored data in FIFO ( First In / First Out ) order.
+			</p>
+			<h3 class="section-title">Samples</h3>
+			<p class="resource-text">
+				SDK package includes sample codes of each modes. These samples help you to understand how to receive data and develop your own application(s).
+			</p>
+		</div>
+	</div>
+
+</div>
+
+<div id="static-footer">
+	<div class="container">
+		<ul id="footer-nav">
+			<li>&copy; JIN CO.,LTD. ALL Rights Reserved.</li>
+			<li><a href="https://www.jins-jp.com/jinsmeme/">JINS MEME</a></li>
+			<li><a href="http://www.jins-jp.com/">JINS</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C5AD3648-88B9-440A-B848-31A1B120CE8E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MEMELib_Standard</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>79D4D2A29B1FB715D58434EBFACFBB6F1FEF8BBE</key>
+		<string>https://gitlab.rzm.co.jp/jins/lib4meme_ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MEMELib_Realtime/MEMELib_Standard.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>79D4D2A29B1FB715D58434EBFACFBB6F1FEF8BBE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://gitlab.rzm.co.jp/jins/lib4meme_ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>79D4D2A29B1FB715D58434EBFACFBB6F1FEF8BBE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>79D4D2A29B1FB715D58434EBFACFBB6F1FEF8BBE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lib4meme_ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

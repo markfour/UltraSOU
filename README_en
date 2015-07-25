@@ -1,0 +1,13 @@
+This SDK is for the JINS MEME beta(20150407) which is distributed to those who won JINS MEME Idea Pitch Contest 1st Round.
+The SDK is already able to provide most of the data, but with some exceptions which are still under development.
+Please find the details in the attached document.
+
+Functions:
+- Communicating with the JINS MEME beta via Bluetooth LE
+- Getting Standard Mode data
+- Getting Realtime Mode data
+- Start Guide and API Reference included
+
+System Requirements:
+- iOS8+ supported
+- XCode 6.2+ recommended

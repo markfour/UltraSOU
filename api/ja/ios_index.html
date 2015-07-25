@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7 ]><html lang="ja" class="ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="ja" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="ja" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ja-JP" itemscope itemtype="http://schema.org/Product"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="天才、募集。JINS MEMEで世界を変えませんか？" />
+<meta name="Keywords" content="JINS,JINS,JNS,JINZ,JNZ,JIN's,JIN's GLOBAL STANDARD,ジンズ,メガネ,眼鏡,めがね,アイウェア,アイウエア,フレーム,サングラス,MEME,JINS MEME,JINS MEME,ACADEMIC,アカデミック" />
+<!-- facebook  OG -->
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:title" content="JINS MEME DEVELOPER IDEA PITCH CONTEST | JINS MEME（ミーム） DEVELOPERS | JINS - 眼鏡（メガネ・めがね）" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://developers.jins.com/ja/idea_pitch.html" />
+<meta property="og:image" content="http://academic.jins.com/img/common.share.png" />
+<meta property="og:site_name" content="JINS MEME（ミーム） DEVELOPERS" />
+<meta property="fb:app_id" content="430545706975307" />
+<meta property="og:description" content="天才、募集。JINS MEMEで世界を変えませんか？" />
+
+<link rel="shortcut icon" href="/img/common/favicon.ico">
+<title>JINS MEME DEVELOPER IDEA PITCH CONTEST | JINS MEME（ミーム） DEVELOPERS | JINS - 眼鏡（メガネ・めがね）</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ▽CSS▽ -->
+<link href="../css/import.css" type="text/css" rel="stylesheet"/>
+</head>
+<body class="resource">
+<div id="static-header">
+
+	<div class="container">
+
+		<a id="logo" href="ios_index.html"><img src="../img/logo.png"></a>
+
+		<ul id="header-nav">
+
+			<li class="ja active"><a href="#">JP</a></li>
+
+			<li class="en normal"><a href="../en/ios_index.html">EN</a></li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+<div id="grobal-container">
+	<div class="row resource">
+		<div class="row resource">
+			<div class="container">
+				<ul id="resource-nav">
+					<li class="active"><a href="#">スタートガイド</a></li>
+					<li><a href="api_ios_meme_lib.html">APIリファレンス</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="row white">
+		<div class="container resource">
+			<h3 class="section-title">JINS MEME SDKへようこそ</h3>
+			<p class="resource-text">
+				このドキュメントには、開発者がはじめてJINS MEME SDKをダウンロードして、JINS MEMEと連動するアプリケーションを開発するために、必要な情報を記述しています。<br/>Bluetooth 4.0（BLE）の仕様を理解していなくても開発は進められますが、開発ドキュメントの一部にはBLE特有の用語が使用されています。<br/>なお、JINS MEME SDKはCoreBluetooth frameworkを使用しています。XCode上でプロジェクトに追加してください。
+			</p>
+			<h3 class="section-title">アプリケーション認証について</h3>
+			<p class="resource-text">
+				JINS MEMEのアプリケーションを開発、配布するためにはアプリID / アプリSecretを取得する必要があります。JINSアカウントを作成して、<a href='https://developers.jins.com/app/create'>アプリを作成</a>してください。<br/>取得したアプリID / アプリSecretをMEMELibのsetAppClientIdの引数に入れて認証をおこなってください。この認証をおこなわない限り、MEMELibは動作しません。
+			</p>
+			<h3 class="section-title">データモードについて</h3>
+			<p class="resource-text">
+				JINS MEMEにはスタンダードモードとリアルタイムモードの２つのデータモードがあります。<br/>スタンダードモードは、JINS MEMEの消費電力を抑えて1分間に１回の通信を行います。比較的長いスパンでのデータ解析を行うようなアプリケーション開発を目的としています。<br/>一方、リアルタイムモードは、データの送出頻度が高いため、消費電力は増えますが、瞬目（瞬き）やそれに付随する情報を約26Hzで取得することが可能です。<br/>データモードはMEMELibのchangeDataModeで変更できますが、アプリケーションがフォアグラウンドにある必要があります。
+			</p>
+			<h3 class="section-title">データ一覧</h3>
+			<h4 class="section-subtitle">リアルタイムモード</h4>
+			<table class='resource-table'><thead><tr><th width='300'>名前</th><th>説明</th></tr></thead><tbody><tr><td>eyeMoveUp</td><td>視線が上に動いたかどうかを示す整数値<br/>0：なし<br/>1：移動検知<br/>2：⼤量移動検知<br/>3：逆移動検知</td></tr><tr><td>eyeMoveDown</td><td>視線が下に動いたかどうかを示す整数値<br/>0：なし<br/>1：移動検知<br/>2：⼤量移動検知<br/>3：逆移動検知</td></tr><tr><td>eyeMoveLeft</td><td>視線が左に動いたかどうかを示す整数値<br/>0：なし<br/>1：移動検知<br/>2：⼤量移動検知<br/>3：逆移動検知</td></tr><tr><td>eyeMoveRight</td><td>視線が右に動いたかどうかを示す整数値<br/>0：なし<br/>1：移動検知<br/>2：⼤量移動検知<br/>3：逆移動検知</td></tr><tr><td>blinkSpeed</td><td>まばたきのスピード（Sec）</td></tr><tr><td>blinkStrength</td><td>まばたきの強さ</td></tr><tr><td>walking</td><td>かかとを地面についたかどうか。それを検出するとtrueになる</td></tr><tr><td>roll</td><td>姿勢を表す角度のうちのロール要素を示す度</td></tr><tr><td>pitch</td><td>姿勢を表す角度のうちのピッチ要素を示す度</td></tr><tr><td>yaw</td><td>姿勢を表す角度のうちのヨー要素を示す度</td></tr><tr><td>accX</td><td>加速度のX軸の値。-128 ~ 127 の1byteの整数値</td></tr><tr><td>accY</td><td>加速度のY軸の値。-128 ~ 127 の1byteの整数値</td></tr><tr><td>accZ</td><td>加速度のZ軸の値。-128 ~ 127 の1byteの整数値</td></tr><tr><td>fitError</td><td>JINS MEMEがきちんと装着されているかどうかを示す整数値。<br/>0：エラーなし<br/>1：左鼻パッドエラー<br/>2：右鼻パッドエラー<br/>3：ブリッジエラー</td></tr><tr><td>powerLeft</td><td>電池残量を表す整数値<br/>0：充電中<br/>1：低電圧<br/>2：Lv2<br/>3：Lv3 <br/>4：Lv4<br/>5：満充電</td></tr></tbody></table>
+			<h4 class="section-subtitle">スタンダードモード</h4>
+			<table class='resource-table'><thead><tr><th width='200'>名前</th><th>説明</th></tr></thead><tbody><tr><td>eyeMoveBigHorizontal</td><td>1分間に左右方向の大きな視線移動が何回発生したかを示す整数値</td></tr><tr><td>eyeMoveBigVertical</td><td>1分間に上下方向の大きな視線移動が何回発生したかを示す整数値</td></tr><tr><td>eyeMoveHorizontal</td><td>1分間に左右方向の視線移動が何回発生したかを示す整数値</td></tr><tr><td>eyeMoveVertical</td><td>1分間に上下方向の視線移動が何回発生したかを示す整数値</td></tr><tr><td>EOGNoiseDuration</td><td>安定した眼電位の検出ができなかった信頼性の低い状態をノイズ状態とし、その時間を秒で示す整数値</td></tr><tr><td>numBlinks</td><td>1分間のまばたきの回数</td></tr><tr><td>numBlinkBurst</td><td>まばたきとまばたきの間隔が1秒以内のものを連続まばたきとしたとき、その1分間の回数</td></tr><tr><td>blinkSpeed</td><td>1分間のまばたきの平均スピード</td></tr><tr><td>blinkStrength</td><td>1分間のまばたきの平均強度</td></tr><tr><td>blinkIntervalAvg</td><td>まばたきとまばたきの間隔の1分間の平均</td></tr><tr><td>sleepy</td><td>眠気兆候の度合い<br/>0: データなし<br/>1: 眠くない<br/>2: 少し眠い<br/>3: 大変眠い</td></tr><tr><td>focus</td><td>集中度傾向の度合い<br/>0: データなし<br/>1: 集中していない<br/>2: 少し集中している<br/>3: 大変集中している</td></tr><tr><td>cadence</td><td>1分間の歩数</td></tr><tr><td>bodyMoveVertical</td><td>歩行時に上下に動いた幅の1分間の平均値</td></tr><tr><td>numSteps280</td><td>１歩から次の１歩までの間隔が280ミリ秒未満の歩数</td></tr><tr><td>numSteps310</td><td>１歩から次の１歩までの間隔が280ミリ秒以上310ミリ秒未満の歩数</td></tr><tr><td>numSteps340</td><td>１歩から次の１歩までの間隔が310ミリ秒以上340ミリ秒未満の歩数</td></tr><tr><td>numSteps370</td><td>１歩から次の１歩までの間隔が340ミリ秒以上370ミリ秒未満の歩数</td></tr><tr><td>numSteps400</td><td>１歩から次の１歩までの間隔が370ミリ秒以上400ミリ秒未満の歩数</td></tr><tr><td>numSteps430</td><td>１歩から次の１歩までの間隔が400ミリ秒以上430ミリ秒未満の歩数</td></tr><tr><td>numSteps460</td><td>１歩から次の１歩までの間隔が430ミリ秒以上460ミリ秒未満の歩数</td></tr><tr><td>numSteps500</td><td>１歩から次の１歩までの間隔が460ミリ秒以上500ミリ秒未満の歩数</td></tr><tr><td>numSteps530</td><td>１歩から次の１歩までの間隔が500ミリ秒以上530ミリ秒未満の歩数</td></tr><tr><td>numSteps560</td><td>１歩から次の１歩までの間隔が530ミリ秒以上560ミリ秒未満の歩数</td></tr><tr><td>numSteps590</td><td>１歩から次の１歩までの間隔が560ミリ秒以上590ミリ秒未満の歩数</td></tr><tr><td>numSteps620</td><td>１歩から次の１歩までの間隔が590ミリ秒以上620ミリ秒未満の歩数</td></tr><tr><td>numSteps650</td><td>１歩から次の１歩までの間隔が620ミリ秒以上650ミリ秒未満の歩数</td></tr><tr><td>numSteps680</td><td>１歩から次の１歩までの間隔が650ミリ秒以上680ミリ秒未満の歩数</td></tr><tr><td>numSteps710</td><td>１歩から次の１歩までの間隔が680ミリ秒以上710ミリ秒未満の歩数</td></tr><tr><td>numSteps750</td><td>１歩から次の１歩までの間隔が710ミリ秒以上750ミリ秒未満の歩数</td></tr><tr><td>numSteps780</td><td>１歩から次の１歩までの間隔が750ミリ秒以上780ミリ秒未満の歩数</td></tr><tr><td>numSteps810</td><td>１歩から次の１歩までの間隔が780ミリ秒以上810ミリ秒未満の歩数</td></tr><tr><td>numSteps840</td><td>１歩から次の１歩までの間隔が810ミリ秒以上840ミリ秒未満の歩数</td></tr><tr><td>numSteps870</td><td>１歩から次の１歩までの間隔が840ミリ秒以上870ミリ秒未満の歩数</td></tr><tr><td>numSteps900</td><td>１歩から次の１歩までの間隔が870ミリ秒以上900ミリ秒未満の歩数</td></tr><tr><td>numSteps930</td><td>１歩から次の１歩までの間隔が900ミリ秒以上930ミリ秒未満の歩数</td></tr><tr><td>numSteps960</td><td>１歩から次の１歩までの間隔が930ミリ秒以上960ミリ秒未満の歩数</td></tr><tr><td>numSteps1000</td><td>１歩から次の１歩までの間隔が960ミリ秒以上1000ミリ秒未満の歩数</td></tr><tr><td>numSteps</td><td>上記 歩数の合計</td></tr><tr><td>rollAvg</td><td>歩いているときに左右に動いた体軸の角度（度）の平均値</td></tr><tr><td>pitchAvg</td><td>歩いているときに前後に動いた体軸の角度（度）の平均値</td></tr><tr><td>rollDiff</td><td>歩いているときに左右に動いた体軸の角度（度）の大きさ（最大値 - 最小値）</td></tr><tr><td>pitchDiff</td><td>歩いているときに前後に動いた体軸の角度（度）の大きさ（最大値 - 最小値）</td></tr><tr><td>footholdRight</td><td>左足をついてから次につくまでの時間（ミリ秒）の１分間の平均値</td></tr><tr><td>footholdLeft</td><td>右足をついてから次につくまでの時間（ミリ秒）の１分間の平均値</td></tr><tr><td>sittingPostureIndices</td><td>着座時の体軸に対する頭の位置を示す整数値の配列（20秒毎に計測）</td></tr><tr><td>numStoredData</td><td>何らかの理由でJINS MEME本体からスマートフォンに送信できていないデータの件数。たとえばリアルタイムモードのときはスタンダードモードのデータがJINS MEME本体から送出されない。</td></tr><tr><td>capturedAt</td><td>計測した時刻を表すUNIXタイムスタンプ</td></tr><tr><td>fitError</td><td>JINS MEMEがきちんと装着されているかどうかを示す整数値。<br/>0：エラーなし<br/>1：左鼻パッドエラー <br/>2：右鼻パッドエラー<br/>3：ブリッジエラー</td></tr><tr><td>powerLeft</td><td>電池残量を表す整数値<br/>0：充電中<br/>1：低電圧<br/>2：Lv2<br/>3：Lv3 <br/>4：Lv4<br/>5：満充電</td></tr><tr><td>isCurrent</td><td>最新のデータかどうか</td></tr><tr><td>isEOGValid</td><td>眼電位のデータに一定以上のノイズ影響が含まれる場合は無効とする</td></tr></tbody></table>
+			<h3 class="section-title">JINS MEME内でのデータストアについて</h3>
+			<p class="resource-text">
+				JINS MEMEはスタンダードモードのデータをデバイス内に貯める機能があります。なんらかの原因によってJINS MEME からアプリケーションにスタンダードモードのデータが渡っていないと判断されるとJINS MEMEはそのデータをデバイス内メモリに最大１６時間分保存します。<br/>データが渡っていないと判断されるのは下記の３ケースです。<br/>・データモードがリアルタイムモードに設定されている<br/>・JINS MEMEの電源は入っているが、アプリケーションと接続されていない場合<br/>・アプリケーションがなんらかの理由で正常動作していない場合<br/>JINS MEME内に溜まったデータはその原因が解消されると、すぐにFIFO ( First In / First Out )スタイルでアプリケーションへと送信されます。
+			</p>
+			<h3 class="section-title">サンプルプログラム</h3>
+			<p class="resource-text">
+				SDKをダウンロードいただくと、スタンダードモード、リアルタイムモード用のサンプルプロジェクトがそれぞれ同梱されています。アプリケーションの目的に応じてご参照ください。
+			</p>
+		</div>
+	</div>
+
+</div>
+
+<div id="static-footer">
+	<div class="container">
+		<ul id="footer-nav">
+			<li>&copy; JIN CO.,LTD. ALL Rights Reserved.</li>
+			<li><a href="https://www.jins-jp.com/jinsmeme/">JINS MEME</a></li>
+			<li><a href="http://www.jins-jp.com/">JINS</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
