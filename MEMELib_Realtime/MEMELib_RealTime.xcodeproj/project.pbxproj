@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		350F8B8B199B389A0020859E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B7C199B389A0020859E /* AdSupport.framework */; };
 		350F8B8E199B389A0020859E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B7F199B389A0020859E /* MobileCoreServices.framework */; };
+		350F8B8F199B389A0020859E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B80199B389A0020859E /* StoreKit.framework */; };
 		350F8B90199B389A0020859E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B81199B389A0020859E /* SystemConfiguration.framework */; };
 		350F8B91199B389A0020859E /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B82199B389A0020859E /* Accounts.framework */; };
 		350F8B92199B389A0020859E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350F8B83199B389A0020859E /* Security.framework */; };
@@ -29,9 +30,26 @@
 		35EEC1131998BF6800E70760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EEC1121998BF6800E70760 /* Images.xcassets */; };
 		35EEC1331998BF8200E70760 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EEC1321998BF8200E70760 /* CoreBluetooth.framework */; };
 		35F741A21AC9882A007C83CC /* MMDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F741A11AC9882A007C83CC /* MMDataViewController.m */; };
-		C4433B731B63636500426D50 /* us.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433B721B63636500426D50 /* us.mp3 */; };
-		C4433B751B636D0300426D50 /* hi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433B741B636D0300426D50 /* hi.mp3 */; };
-		C4433B771B638CA900426D50 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4433B761B638CA900426D50 /* StoreKit.framework */; };
+		C4433BD31B639A1100426D50 /* logging_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BB21B639A1100426D50 /* logging_mosq.c */; };
+		C4433BD41B639A1100426D50 /* memory_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BB41B639A1100426D50 /* memory_mosq.c */; };
+		C4433BD51B639A1100426D50 /* messages_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BB61B639A1100426D50 /* messages_mosq.c */; };
+		C4433BD61B639A1100426D50 /* mosquitto.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BB81B639A1100426D50 /* mosquitto.c */; };
+		C4433BD71B639A1100426D50 /* net_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BBC1B639A1100426D50 /* net_mosq.c */; };
+		C4433BD81B639A1100426D50 /* read_handle.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BBE1B639A1100426D50 /* read_handle.c */; };
+		C4433BD91B639A1100426D50 /* read_handle_client.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BC01B639A1100426D50 /* read_handle_client.c */; };
+		C4433BDA1B639A1100426D50 /* read_handle_shared.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BC11B639A1100426D50 /* read_handle_shared.c */; };
+		C4433BDB1B639A1100426D50 /* send_client_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BC21B639A1100426D50 /* send_client_mosq.c */; };
+		C4433BDC1B639A1100426D50 /* send_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BC31B639A1100426D50 /* send_mosq.c */; };
+		C4433BDD1B639A1100426D50 /* thread_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BC51B639A1100426D50 /* thread_mosq.c */; };
+		C4433BDE1B639A1100426D50 /* time_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BC61B639A1100426D50 /* time_mosq.c */; };
+		C4433BDF1B639A1100426D50 /* tls_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BC81B639A1100426D50 /* tls_mosq.c */; };
+		C4433BE01B639A1100426D50 /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BCA1B639A1100426D50 /* util_mosq.c */; };
+		C4433BE11B639A1100426D50 /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = C4433BCC1B639A1100426D50 /* will_mosq.c */; };
+		C4433BE21B639A1100426D50 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C4433BCE1B639A1100426D50 /* LICENSE */; };
+		C4433BE31B639A1100426D50 /* MQTTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4433BD11B639A1100426D50 /* MQTTKit.m */; };
+		C4433BE41B639A1100426D50 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C4433BD21B639A1100426D50 /* README.md */; };
+		C4433BE71B63A07400426D50 /* hi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433BE51B63A07400426D50 /* hi.mp3 */; };
+		C4433BE81B63A07400426D50 /* us.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433BE61B63A07400426D50 /* us.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,8 +68,10 @@
 
 /* Begin PBXFileReference section */
 		350F8B7C199B389A0020859E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		350F8B7D199B389A0020859E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		350F8B7E199B389A0020859E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		350F8B7F199B389A0020859E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		350F8B80199B389A0020859E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		350F8B81199B389A0020859E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		350F8B82199B389A0020859E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		350F8B83199B389A0020859E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -59,6 +79,7 @@
 		350F8B85199B389A0020859E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		350F8B86199B389A0020859E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		350F8B87199B389A0020859E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		350F8B88199B389A0020859E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		35541A851AD2A488005C7FE0 /* MEMELib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MEMELib.framework; path = ../MEMELib.framework; sourceTree = "<group>"; };
 		35EEC0F71998BF6800E70760 /* MEMELib_RealTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MEMELib_RealTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EEC0FA1998BF6800E70760 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,12 +95,46 @@
 		35EEC10F1998BF6800E70760 /* MMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
 		35EEC1101998BF6800E70760 /* MMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MMViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		35EEC1121998BF6800E70760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		35EEC1191998BF6900E70760 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		35EEC1321998BF8200E70760 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		35F741A01AC9882A007C83CC /* MMDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDataViewController.h; sourceTree = "<group>"; };
 		35F741A11AC9882A007C83CC /* MMDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDataViewController.m; sourceTree = "<group>"; };
-		C4433B721B63636500426D50 /* us.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = us.mp3; sourceTree = "<group>"; };
-		C4433B741B636D0300426D50 /* hi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hi.mp3; sourceTree = "<group>"; };
-		C4433B761B638CA900426D50 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C4433BB01B639A1100426D50 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		C4433BB11B639A1100426D50 /* dummypthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummypthread.h; sourceTree = "<group>"; };
+		C4433BB21B639A1100426D50 /* logging_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logging_mosq.c; sourceTree = "<group>"; };
+		C4433BB31B639A1100426D50 /* logging_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging_mosq.h; sourceTree = "<group>"; };
+		C4433BB41B639A1100426D50 /* memory_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory_mosq.c; sourceTree = "<group>"; };
+		C4433BB51B639A1100426D50 /* memory_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_mosq.h; sourceTree = "<group>"; };
+		C4433BB61B639A1100426D50 /* messages_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = messages_mosq.c; sourceTree = "<group>"; };
+		C4433BB71B639A1100426D50 /* messages_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messages_mosq.h; sourceTree = "<group>"; };
+		C4433BB81B639A1100426D50 /* mosquitto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mosquitto.c; sourceTree = "<group>"; };
+		C4433BB91B639A1100426D50 /* mosquitto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto.h; sourceTree = "<group>"; };
+		C4433BBA1B639A1100426D50 /* mosquitto_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto_internal.h; sourceTree = "<group>"; };
+		C4433BBB1B639A1100426D50 /* mqtt3_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqtt3_protocol.h; sourceTree = "<group>"; };
+		C4433BBC1B639A1100426D50 /* net_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_mosq.c; sourceTree = "<group>"; };
+		C4433BBD1B639A1100426D50 /* net_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_mosq.h; sourceTree = "<group>"; };
+		C4433BBE1B639A1100426D50 /* read_handle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle.c; sourceTree = "<group>"; };
+		C4433BBF1B639A1100426D50 /* read_handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = read_handle.h; sourceTree = "<group>"; };
+		C4433BC01B639A1100426D50 /* read_handle_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_client.c; sourceTree = "<group>"; };
+		C4433BC11B639A1100426D50 /* read_handle_shared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_shared.c; sourceTree = "<group>"; };
+		C4433BC21B639A1100426D50 /* send_client_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_client_mosq.c; sourceTree = "<group>"; };
+		C4433BC31B639A1100426D50 /* send_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_mosq.c; sourceTree = "<group>"; };
+		C4433BC41B639A1100426D50 /* send_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = send_mosq.h; sourceTree = "<group>"; };
+		C4433BC51B639A1100426D50 /* thread_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread_mosq.c; sourceTree = "<group>"; };
+		C4433BC61B639A1100426D50 /* time_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = time_mosq.c; sourceTree = "<group>"; };
+		C4433BC71B639A1100426D50 /* time_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_mosq.h; sourceTree = "<group>"; };
+		C4433BC81B639A1100426D50 /* tls_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tls_mosq.c; sourceTree = "<group>"; };
+		C4433BC91B639A1100426D50 /* tls_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls_mosq.h; sourceTree = "<group>"; };
+		C4433BCA1B639A1100426D50 /* util_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_mosq.c; sourceTree = "<group>"; };
+		C4433BCB1B639A1100426D50 /* util_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util_mosq.h; sourceTree = "<group>"; };
+		C4433BCC1B639A1100426D50 /* will_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = will_mosq.c; sourceTree = "<group>"; };
+		C4433BCD1B639A1100426D50 /* will_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = will_mosq.h; sourceTree = "<group>"; };
+		C4433BCE1B639A1100426D50 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C4433BD01B639A1100426D50 /* MQTTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTKit.h; sourceTree = "<group>"; };
+		C4433BD11B639A1100426D50 /* MQTTKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTKit.m; sourceTree = "<group>"; };
+		C4433BD21B639A1100426D50 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C4433BE51B63A07400426D50 /* hi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hi.mp3; sourceTree = "<group>"; };
+		C4433BE61B63A07400426D50 /* us.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = us.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +145,6 @@
 				35EEC0FD1998BF6800E70760 /* CoreGraphics.framework in Frameworks */,
 				350F8B91199B389A0020859E /* Accounts.framework in Frameworks */,
 				35541A861AD2A488005C7FE0 /* MEMELib.framework in Frameworks */,
-				C4433B771B638CA900426D50 /* StoreKit.framework in Frameworks */,
 				350F8B96199B389A0020859E /* CFNetwork.framework in Frameworks */,
 				350F8B93199B389A0020859E /* CoreLocation.framework in Frameworks */,
 				35EEC0FF1998BF6800E70760 /* UIKit.framework in Frameworks */,
@@ -100,6 +154,7 @@
 				350F8B90199B389A0020859E /* SystemConfiguration.framework in Frameworks */,
 				350F8B95199B389A0020859E /* AudioToolbox.framework in Frameworks */,
 				350F8B8E199B389A0020859E /* MobileCoreServices.framework in Frameworks */,
+				350F8B8F199B389A0020859E /* StoreKit.framework in Frameworks */,
 				35EEC0FB1998BF6800E70760 /* Foundation.framework in Frameworks */,
 				350F8B8B199B389A0020859E /* AdSupport.framework in Frameworks */,
 			);
@@ -111,10 +166,10 @@
 		35EEC0EE1998BF6800E70760 = {
 			isa = PBXGroup;
 			children = (
+				35541A851AD2A488005C7FE0 /* MEMELib.framework */,
 				35EEC1001998BF6800E70760 /* MEMELib_Sample */,
 				35EEC0F91998BF6800E70760 /* Frameworks */,
 				35EEC0F81998BF6800E70760 /* Products */,
-				D9C99C731EA68D6B8D2B4381 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,17 +189,19 @@
 				350F8B86199B389A0020859E /* AudioToolbox.framework */,
 				350F8B7E199B389A0020859E /* CFNetwork.framework */,
 				35EEC1321998BF8200E70760 /* CoreBluetooth.framework */,
-				35EEC0FC1998BF6800E70760 /* CoreGraphics.framework */,
-				350F8B84199B389A0020859E /* CoreLocation.framework */,
+				350F8B88199B389A0020859E /* CoreGraphics.framework */,
+				350F8B7D199B389A0020859E /* CoreLocation.framework */,
 				35EEC0FA1998BF6800E70760 /* Foundation.framework */,
-				35541A851AD2A488005C7FE0 /* MEMELib.framework */,
 				350F8B7F199B389A0020859E /* MobileCoreServices.framework */,
 				350F8B83199B389A0020859E /* Security.framework */,
 				350F8B85199B389A0020859E /* Social.framework */,
-				C4433B761B638CA900426D50 /* StoreKit.framework */,
+				350F8B80199B389A0020859E /* StoreKit.framework */,
 				350F8B81199B389A0020859E /* SystemConfiguration.framework */,
 				35EEC0FE1998BF6800E70760 /* UIKit.framework */,
+				35EEC1191998BF6900E70760 /* XCTest.framework */,
+				350F8B84199B389A0020859E /* CoreLocation.framework */,
 				350F8B87199B389A0020859E /* CFNetwork.framework */,
+				35EEC0FC1998BF6800E70760 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,7 +209,7 @@
 		35EEC1001998BF6800E70760 /* MEMELib_Sample */ = {
 			isa = PBXGroup;
 			children = (
-				C4433B741B636D0300426D50 /* hi.mp3 */,
+				C4433BE51B63A07400426D50 /* hi.mp3 */,
 				35EEC1121998BF6800E70760 /* Images.xcassets */,
 				35EEC10C1998BF6800E70760 /* Main.storyboard */,
 				35EEC1091998BF6800E70760 /* MMAppDelegate.h */,
@@ -161,8 +218,9 @@
 				35F741A11AC9882A007C83CC /* MMDataViewController.m */,
 				35EEC10F1998BF6800E70760 /* MMViewController.h */,
 				35EEC1101998BF6800E70760 /* MMViewController.m */,
+				C4433BAE1B639A1100426D50 /* MQTTKit */,
 				35EEC1011998BF6800E70760 /* Supporting Files */,
-				C4433B721B63636500426D50 /* us.mp3 */,
+				C4433BE61B63A07400426D50 /* us.mp3 */,
 			);
 			path = MEMELib_Sample;
 			sourceTree = "<group>";
@@ -178,11 +236,61 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D9C99C731EA68D6B8D2B4381 /* Pods */ = {
+		C4433BAE1B639A1100426D50 /* MQTTKit */ = {
 			isa = PBXGroup;
 			children = (
+				C4433BAF1B639A1100426D50 /* libmosquitto */,
+				C4433BCE1B639A1100426D50 /* LICENSE */,
+				C4433BCF1B639A1100426D50 /* MQTTKit */,
+				C4433BD21B639A1100426D50 /* README.md */,
 			);
-			name = Pods;
+			path = MQTTKit;
+			sourceTree = "<group>";
+		};
+		C4433BAF1B639A1100426D50 /* libmosquitto */ = {
+			isa = PBXGroup;
+			children = (
+				C4433BB01B639A1100426D50 /* config.h */,
+				C4433BB11B639A1100426D50 /* dummypthread.h */,
+				C4433BB21B639A1100426D50 /* logging_mosq.c */,
+				C4433BB31B639A1100426D50 /* logging_mosq.h */,
+				C4433BB41B639A1100426D50 /* memory_mosq.c */,
+				C4433BB51B639A1100426D50 /* memory_mosq.h */,
+				C4433BB61B639A1100426D50 /* messages_mosq.c */,
+				C4433BB71B639A1100426D50 /* messages_mosq.h */,
+				C4433BB81B639A1100426D50 /* mosquitto.c */,
+				C4433BB91B639A1100426D50 /* mosquitto.h */,
+				C4433BBA1B639A1100426D50 /* mosquitto_internal.h */,
+				C4433BBB1B639A1100426D50 /* mqtt3_protocol.h */,
+				C4433BBC1B639A1100426D50 /* net_mosq.c */,
+				C4433BBD1B639A1100426D50 /* net_mosq.h */,
+				C4433BBE1B639A1100426D50 /* read_handle.c */,
+				C4433BBF1B639A1100426D50 /* read_handle.h */,
+				C4433BC01B639A1100426D50 /* read_handle_client.c */,
+				C4433BC11B639A1100426D50 /* read_handle_shared.c */,
+				C4433BC21B639A1100426D50 /* send_client_mosq.c */,
+				C4433BC31B639A1100426D50 /* send_mosq.c */,
+				C4433BC41B639A1100426D50 /* send_mosq.h */,
+				C4433BC51B639A1100426D50 /* thread_mosq.c */,
+				C4433BC61B639A1100426D50 /* time_mosq.c */,
+				C4433BC71B639A1100426D50 /* time_mosq.h */,
+				C4433BC81B639A1100426D50 /* tls_mosq.c */,
+				C4433BC91B639A1100426D50 /* tls_mosq.h */,
+				C4433BCA1B639A1100426D50 /* util_mosq.c */,
+				C4433BCB1B639A1100426D50 /* util_mosq.h */,
+				C4433BCC1B639A1100426D50 /* will_mosq.c */,
+				C4433BCD1B639A1100426D50 /* will_mosq.h */,
+			);
+			path = libmosquitto;
+			sourceTree = "<group>";
+		};
+		C4433BCF1B639A1100426D50 /* MQTTKit */ = {
+			isa = PBXGroup;
+			children = (
+				C4433BD01B639A1100426D50 /* MQTTKit.h */,
+				C4433BD11B639A1100426D50 /* MQTTKit.m */,
+			);
+			path = MQTTKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,12 +300,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35EEC1291998BF6900E70760 /* Build configuration list for PBXNativeTarget "MEMELib_RealTime.temp_caseinsensitive_rename" */;
 			buildPhases = (
-				3A37FB89C1E4B05BE9A6AC0C /* Check Pods Manifest.lock */,
 				35EEC0F31998BF6800E70760 /* Sources */,
 				35EEC0F41998BF6800E70760 /* Frameworks */,
 				35EEC0F51998BF6800E70760 /* Resources */,
 				35D049901AD2876200D4E6AE /* Embed Frameworks */,
-				EB4A1CBE9DF31D1FFA341806 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,12 +325,8 @@
 				ORGANIZATIONNAME = "JINS MEME";
 				TargetAttributes = {
 					35EEC0F61998BF6800E70760 = {
-						DevelopmentTeam = L7ME6MQ64J;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
 						};
@@ -254,57 +356,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4433B751B636D0300426D50 /* hi.mp3 in Resources */,
-				C4433B731B63636500426D50 /* us.mp3 in Resources */,
+				C4433BE81B63A07400426D50 /* us.mp3 in Resources */,
+				C4433BE71B63A07400426D50 /* hi.mp3 in Resources */,
 				35EEC1131998BF6800E70760 /* Images.xcassets in Resources */,
 				35EEC1051998BF6800E70760 /* InfoPlist.strings in Resources */,
+				C4433BE21B639A1100426D50 /* LICENSE in Resources */,
 				35EEC10E1998BF6800E70760 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3A37FB89C1E4B05BE9A6AC0C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EB4A1CBE9DF31D1FFA341806 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		35EEC0F31998BF6800E70760 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4433BDD1B639A1100426D50 /* thread_mosq.c in Sources */,
+				C4433BDF1B639A1100426D50 /* tls_mosq.c in Sources */,
+				C4433BDB1B639A1100426D50 /* send_client_mosq.c in Sources */,
+				C4433BE41B639A1100426D50 /* README.md in Sources */,
 				35EEC10B1998BF6800E70760 /* MMAppDelegate.m in Sources */,
+				C4433BD81B639A1100426D50 /* read_handle.c in Sources */,
+				C4433BE11B639A1100426D50 /* will_mosq.c in Sources */,
+				C4433BDA1B639A1100426D50 /* read_handle_shared.c in Sources */,
+				C4433BD61B639A1100426D50 /* mosquitto.c in Sources */,
+				C4433BE01B639A1100426D50 /* util_mosq.c in Sources */,
 				35EEC1111998BF6800E70760 /* MMViewController.m in Sources */,
+				C4433BD51B639A1100426D50 /* messages_mosq.c in Sources */,
+				C4433BD71B639A1100426D50 /* net_mosq.c in Sources */,
+				C4433BD41B639A1100426D50 /* memory_mosq.c in Sources */,
+				C4433BDE1B639A1100426D50 /* time_mosq.c in Sources */,
+				C4433BE31B639A1100426D50 /* MQTTKit.m in Sources */,
 				35F741A21AC9882A007C83CC /* MMDataViewController.m in Sources */,
+				C4433BD91B639A1100426D50 /* read_handle_client.c in Sources */,
+				C4433BDC1B639A1100426D50 /* send_mosq.c in Sources */,
+				C4433BD31B639A1100426D50 /* logging_mosq.c in Sources */,
 				35EEC1071998BF6800E70760 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,7 +494,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -419,13 +505,8 @@
 				INFOPLIST_FILE = "MEMELib_Sample/MEMELib_RealTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = MEMELib_RealTime;
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -436,7 +517,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -448,12 +528,7 @@
 				INFOPLIST_FILE = "MEMELib_Sample/MEMELib_RealTime-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-				);
 				PRODUCT_NAME = MEMELib_RealTime;
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

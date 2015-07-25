@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    self.title      = @"RealTime Data";
+    self.title = @"RealTime Data";
     
     isVertival = true;
     
@@ -75,7 +75,32 @@
         [_auidoIntro prepareToPlay];
     }
     
+    // create the client with a unique client ID
+    NSString *clientID = @"ultra-user";
+    MQTTClient *client = [[MQTTClient alloc] initWithClientId:clientID];
+    client.username = @"ultra-user";
+    client.password = @"ultra-user";
+    client.port = 16056;
     
+    // connect to the MQTT server
+    [client connectToHost:@"m01.mqtt.cloud.nifty.com"
+        completionHandler:^(NSUInteger code) {
+            if (code == ConnectionAccepted) {
+                // when the client is connected, send a MQTT message
+                [client publishString:@"on"
+                              toTopic:@"music"
+                              withQos:AtMostOnce
+                               retain:NO
+                    completionHandler:^(int mid) {
+                        NSLog(@"message has been delivered");
+                    }];
+            }
+        }];
+    
+    [client setMessageHandler:^(MQTTMessage *message) {
+        //        NSString *text = [message.payloadString];
+        NSLog(@"received message %@", message.payloadString);
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated

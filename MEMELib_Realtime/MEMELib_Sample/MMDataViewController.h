@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MEMELib/MEMELib.h>
 #import <AVFoundation/AVFoundation.h>
-//#import <MQTTKit.h>
 
+#import "MQTTKit.h"
 
 @class MMViewController;
 
