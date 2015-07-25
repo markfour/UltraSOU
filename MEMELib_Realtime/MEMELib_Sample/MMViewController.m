@@ -1,13 +1,13 @@
 //
 //  MMViewController.m
-//  
+//
 //
 //  Created by JINS MEME on 8/11/14.
 //  Copyright (c) 2014 JIN. All rights reserved.
 //
 
 #import "MMViewController.h"
-#import <MEMELib/MEMELib.h>
+
 
 @interface MMViewController ()
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     [MEMELib sharedInstance].delegate = self;
     [[MEMELib sharedInstance] addObserver: self forKeyPath: @"centralManagerEnabled" options: NSKeyValueObservingOptionNew context:nil];
     
@@ -30,7 +30,30 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: @"Scan" style:UIBarButtonItemStylePlain target: self action:@selector(scanButtonPressed:)];
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
-//    [[MEMELib sharedInstance] disconnectPeripheral];
+    _debugView = [[UIView alloc] init];
+    [self.view addSubview:_debugView];
+    
+    UIActivityIndicatorView *ai = [[UIActivityIndicatorView alloc] init];
+    ai.frame = CGRectMake(160 - 22, 0, 44, 44);
+    ai.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    [_debugView addSubview:ai];
+    [ai startAnimating];
+    
+    UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [nextButton addTarget:self action:@selector(nextButtonTap:) forControlEvents:UIControlEventTouchDown];
+    [nextButton setTitle:@"Next" forState:UIControlStateNormal];
+    nextButton.frame = CGRectMake(0, 44, 160, 44);
+    [_debugView addSubview:nextButton];
+    
+    //    [[MEMELib sharedInstance] disconnectPeripheral];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    _debugView.frame = CGRectMake(0, 60, 320, 88);
+    
+    [self.view bringSubviewToFront:_debugView];
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -44,6 +67,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)nextButtonTap:(id)sender {
+    [self performSegueWithIdentifier:@"DataViewSegue" sender: self];
 }
 
 - (IBAction)scanButtonPressed:(id)sender {
@@ -90,7 +118,7 @@
     [self dismissViewControllerAnimated: YES completion: ^{
         self.dataViewCtl = nil;
         NSLog(@"MEME Device Disconnected");
-
+        
     }];
 }
 
@@ -144,7 +172,7 @@
     CBPeripheral *peripheral = [self.peripheralsFound objectAtIndex: indexPath.row];
     MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral ];
     [self checkMEMEStatus: status];
-
+    
     NSLog(@"Start connecting to MEME Device...");
 }
 

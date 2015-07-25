@@ -40,15 +40,22 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: self.indicatorView];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: @"Disconnect" style:UIBarButtonItemStylePlain target: self action:@selector(disconnectButtonPressed:)];
     
+    _debugView = [[UIView alloc] init];
+    [self.view addSubview:_debugView];
+    
     {
-        NSBundle *mainBundle = [NSBundle mainBundle];
-        NSString *filePath = [mainBundle pathForResource:@"us" ofType:@"mp3"];
-        NSURL *fileUrl  = [NSURL fileURLWithPath:filePath];
-        
-        NSError* error = nil;
-        _auidoIntro = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
-        [_auidoIntro prepareToPlay];
+        UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [nextButton addTarget:self action:@selector(mqttTest:) forControlEvents:UIControlEventTouchDown];
+        [nextButton setTitle:@"MQTT" forState:UIControlStateNormal];
+        nextButton.frame = CGRectMake(0, 0, 160, 44);
+        [_debugView addSubview:nextButton];
     }
+    UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [nextButton addTarget:self action:@selector(mqttTest:) forControlEvents:UIControlEventTouchDown];
+    [nextButton setTitle:@"MQTT" forState:UIControlStateNormal];
+    nextButton.frame = CGRectMake(0, 44, 160, 44);
+    [_debugView addSubview:nextButton];
+    
     {
         NSBundle *mainBundle = [NSBundle mainBundle];
         NSString *filePath = [mainBundle pathForResource:@"hi" ofType:@"mp3"];
@@ -58,6 +65,29 @@
         _audioHai = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
         [_audioHai prepareToPlay];
     }
+    {
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *filePath = [mainBundle pathForResource:@"hi" ofType:@"mp3"];
+        NSURL *fileUrl  = [NSURL fileURLWithPath:filePath];
+        
+        NSError* error = nil;
+        _auidoIntro = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
+        [_auidoIntro prepareToPlay];
+    }
+    
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    _debugView.frame = CGRectMake(0, 0, 320, 88);
+    
+    [self.view bringSubviewToFront:_debugView];
+}
+
+- (IBAction)mqttTest:(id)sender {
+//    [self performSegueWithIdentifier:@"DataViewSegue" sender: self];
 }
 
 - (void) disconnectButtonPressed:(id) sender

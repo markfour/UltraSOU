@@ -9,16 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <MEMELib/MEMELib.h>
 #import <AVFoundation/AVFoundation.h>
+//#import <MQTTKit.h>
+
 
 @class MMViewController;
 
 @interface MMDataViewController : UITableViewController
 {
-bool isVertival;
+    bool isVertival;
 }
 - (void) memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
 
 @property (strong, nonatomic) AVAudioPlayer *auidoIntro;
 @property (strong, nonatomic) AVAudioPlayer *audioHai;
+@property (strong, nonatomic) UIView *debugView;
 
 @end
