@@ -29,7 +29,6 @@
 		35EEC1131998BF6800E70760 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EEC1121998BF6800E70760 /* Images.xcassets */; };
 		35EEC1331998BF8200E70760 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EEC1321998BF8200E70760 /* CoreBluetooth.framework */; };
 		35F741A21AC9882A007C83CC /* MMDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F741A11AC9882A007C83CC /* MMDataViewController.m */; };
-		5D9E37BD7AE514D47533A74B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D75750F14D08DD0DED5F48 /* libPods.a */; };
 		C4433B731B63636500426D50 /* us.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433B721B63636500426D50 /* us.mp3 */; };
 		C4433B751B636D0300426D50 /* hi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433B741B636D0300426D50 /* hi.mp3 */; };
 		C4433B771B638CA900426D50 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4433B761B638CA900426D50 /* StoreKit.framework */; };
@@ -50,7 +49,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1B55765B0A3DE4974B8B847B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		350F8B7C199B389A0020859E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		350F8B7E199B389A0020859E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		350F8B7F199B389A0020859E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -76,15 +74,12 @@
 		35EEC10F1998BF6800E70760 /* MMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMViewController.h; sourceTree = "<group>"; };
 		35EEC1101998BF6800E70760 /* MMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MMViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		35EEC1121998BF6800E70760 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		35EEC1191998BF6900E70760 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		35EEC1321998BF8200E70760 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		35F741A01AC9882A007C83CC /* MMDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDataViewController.h; sourceTree = "<group>"; };
 		35F741A11AC9882A007C83CC /* MMDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDataViewController.m; sourceTree = "<group>"; };
-		78D75750F14D08DD0DED5F48 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4433B721B63636500426D50 /* us.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = us.mp3; sourceTree = "<group>"; };
 		C4433B741B636D0300426D50 /* hi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hi.mp3; sourceTree = "<group>"; };
 		C4433B761B638CA900426D50 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		FA06176D52706E71610651D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +102,6 @@
 				350F8B8E199B389A0020859E /* MobileCoreServices.framework in Frameworks */,
 				35EEC0FB1998BF6800E70760 /* Foundation.framework in Frameworks */,
 				350F8B8B199B389A0020859E /* AdSupport.framework in Frameworks */,
-				5D9E37BD7AE514D47533A74B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +144,7 @@
 				C4433B761B638CA900426D50 /* StoreKit.framework */,
 				350F8B81199B389A0020859E /* SystemConfiguration.framework */,
 				35EEC0FE1998BF6800E70760 /* UIKit.framework */,
-				35EEC1191998BF6900E70760 /* XCTest.framework */,
 				350F8B87199B389A0020859E /* CFNetwork.framework */,
-				78D75750F14D08DD0DED5F48 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,8 +181,6 @@
 		D9C99C731EA68D6B8D2B4381 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FA06176D52706E71610651D8 /* Pods.debug.xcconfig */,
-				1B55765B0A3DE4974B8B847B /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -413,7 +403,6 @@
 		};
 		35EEC12A1998BF6900E70760 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA06176D52706E71610651D8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -443,7 +432,6 @@
 		};
 		35EEC12B1998BF6900E70760 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B55765B0A3DE4974B8B847B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
