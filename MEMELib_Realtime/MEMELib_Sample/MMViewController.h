@@ -14,7 +14,7 @@
 @interface MMViewController : UIViewController <MEMELibDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView  *peripheralListTableView;
-@property (strong, nonatomic) MMDataViewController  *dataViewCtl;
+@property (strong, nonatomic) MMDataViewController *dataViewCtl;
 @property (strong, nonatomic) UIView *debugView;
 
 - (IBAction) scanButtonPressed:(id)sender;

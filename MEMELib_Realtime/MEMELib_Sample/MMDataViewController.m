@@ -7,11 +7,7 @@
 //
 
 #import "MMDataViewController.h"
-#import <MEMELib/MEMELib.h>
-#import <AudioToolbox/AudioServices.h>
 #import "MMViewController.h"
-#import <AVFoundation/AVFoundation.h>
-
 
 @interface MMDataViewController ()
 
@@ -30,6 +26,7 @@
     self.title = @"RealTime Data";
     
     isVertival = true;
+    isMusicPlaying = false;
     
     // Data Commmunication Indicator
     self.indicatorView                  = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 24, 24)];
@@ -40,7 +37,12 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: self.indicatorView];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: @"Disconnect" style:UIBarButtonItemStylePlain target: self action:@selector(disconnectButtonPressed:)];
     
+    _backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tutorial.jpg"]];
+    [self.view addSubview:_backgroundView];
+    
     _debugView = [[UIView alloc] init];
+    _debugView.backgroundColor = [UIColor whiteColor];
+    _debugView.alpha = 0.8;
     [self.view addSubview:_debugView];
     
     {
@@ -50,11 +52,20 @@
         nextButton.frame = CGRectMake(0, 0, 160, 44);
         [_debugView addSubview:nextButton];
     }
-    UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [nextButton addTarget:self action:@selector(mqttTest:) forControlEvents:UIControlEventTouchDown];
-    [nextButton setTitle:@"MQTT" forState:UIControlStateNormal];
-    nextButton.frame = CGRectMake(0, 44, 160, 44);
-    [_debugView addSubview:nextButton];
+    {
+        UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [nextButton addTarget:self action:@selector(playBGM) forControlEvents:UIControlEventTouchDown];
+        [nextButton setTitle:@"Play Sound" forState:UIControlStateNormal];
+        nextButton.frame = CGRectMake(0, 44, 160, 44);
+        [_debugView addSubview:nextButton];
+    }
+    {
+        UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [nextButton addTarget:self action:@selector(stopBGM) forControlEvents:UIControlEventTouchDown];
+        [nextButton setTitle:@"Stop Sound" forState:UIControlStateNormal];
+        nextButton.frame = CGRectMake(0, 88, 160, 44);
+        [_debugView addSubview:nextButton];
+    }
     
     {
         NSBundle *mainBundle = [NSBundle mainBundle];
@@ -67,7 +78,7 @@
     }
     {
         NSBundle *mainBundle = [NSBundle mainBundle];
-        NSString *filePath = [mainBundle pathForResource:@"hi" ofType:@"mp3"];
+        NSString *filePath = [mainBundle pathForResource:@"us" ofType:@"mp3"];
         NSURL *fileUrl  = [NSURL fileURLWithPath:filePath];
         
         NSError* error = nil;
@@ -75,6 +86,144 @@
         [_auidoIntro prepareToPlay];
     }
     
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self hideStatusBar];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    _backgroundView.frame = CGRectMake(0, 0, 320, 568);
+    [self.view bringSubviewToFront:_backgroundView];
+    
+    _debugView.frame = CGRectMake(0, 0, 320, 146);
+    [self.view bringSubviewToFront:_debugView];
+}
+
+
+- (BOOL)prefersStatusBarHidden
+{
+    return self.shouldBeHidingStatusBar;
+}
+
+- (IBAction)hideStatusBar
+{
+    self.shouldBeHidingStatusBar = YES;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void)playBGM
+{
+    NSLog(@"Play BGM %f", _auidoIntro.duration);
+    isVertival = false;
+    
+    isMusicPlaying = true;
+    [_auidoIntro stop];
+    _auidoIntro.currentTime = 0;
+    [_auidoIntro play];
+    
+    [self mqtt:@"on"];
+    
+    bgmTimer = [NSTimer
+                scheduledTimerWithTimeInterval:0.01
+                target:self
+                selector:@selector(timer:)
+                userInfo:nil
+                repeats:YES];
+    
+    //スタート時間の取得
+    stdate = [NSDate date];
+}
+
+- (void)stopBGM
+{
+    isMusicPlaying = false;
+    
+    [_auidoIntro stop];
+    
+    [self hey];
+    
+    double score = 0;
+    
+    if (_auidoIntro.currentTime == 0) {
+        //BGMは既に再生済み
+        score = _auidoIntro.duration - (gameTime - _auidoIntro.duration);
+    } else {
+        //BGMはまだ再生中
+        score = gameTime;
+    }
+    
+    NSString *scoreStr = [NSString stringWithFormat:@"%.4f", score];
+    scoreStr = [scoreStr stringByReplacingOccurrencesOfString:@"." withString:@""];
+    
+    [self mqtt:@"off"];
+    
+    NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
+    NSLog(@"score %@", scoreStr);
+}
+
+- (void)showRanking
+{
+    //TODO ここにUIWebViewをモーダルビューで表示させる
+}
+
+- (void)hey
+{
+    _audioHai.currentTime = 0;
+    [_audioHai play];
+}
+
+
+-(void)timer:(NSTimer *)timer{
+    NSDate *now=[NSDate date];    //現在の時間を取得
+    
+    //開始時間と現在時間の差分を、少数点以下2桁で表示
+    NSString *floatString = [NSString stringWithFormat:@"%.2f",[now timeIntervalSinceDate:stdate]];
+    gameTime = floatString.doubleValue;
+    
+    if (!isMusicPlaying) {
+        if ([bgmTimer isValid]) {
+            [bgmTimer invalidate];
+        }
+    }
+}
+
+- (void)mqtt:(NSString *)publichString {
+    // create the client with a unique client ID
+    
+    //TODO remove
+    return;
+    
+    NSString *clientID = @"ultra-user";
+    MQTTClient *client = [[MQTTClient alloc] initWithClientId:clientID];
+    client.username = @"ultra-user";
+    client.password = @"ultra-user";
+    client.port = 16056;
+    
+    // connect to the MQTT server
+    [client connectToHost:@"m01.mqtt.cloud.nifty.com"
+        completionHandler:^(NSUInteger code) {
+            if (code == ConnectionAccepted) {
+                // when the client is connected, send a MQTT message
+                [client publishString:publichString
+                              toTopic:@"music"
+                              withQos:AtMostOnce
+                               retain:NO
+                    completionHandler:^(int mid) {
+                        NSLog(@"message has been delivered");
+                    }];
+            }
+        }];
+    
+    [client setMessageHandler:^(MQTTMessage *message) {
+        NSLog(@"received message %@", message.payloadString);
+    }];
+}
+
+- (IBAction)mqttTest:(id)sender{
     // create the client with a unique client ID
     NSString *clientID = @"ultra-user";
     MQTTClient *client = [[MQTTClient alloc] initWithClientId:clientID];
@@ -87,7 +236,7 @@
         completionHandler:^(NSUInteger code) {
             if (code == ConnectionAccepted) {
                 // when the client is connected, send a MQTT message
-                [client publishString:@"on"
+                [client publishString:@"off"
                               toTopic:@"music"
                               withQos:AtMostOnce
                                retain:NO
@@ -103,18 +252,6 @@
     }];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    _debugView.frame = CGRectMake(0, 0, 320, 88);
-    
-    [self.view bringSubviewToFront:_debugView];
-}
-
-- (IBAction)mqttTest:(id)sender {
-//    [self performSegueWithIdentifier:@"DataViewSegue" sender: self];
-}
-
 - (void) disconnectButtonPressed:(id) sender
 {
     [[MEMELib sharedInstance] disconnectPeripheral];
@@ -127,28 +264,13 @@
     NSLog(@"RealTime Data Received %@", [data description]);
     self.latestRealTimeData = data;
     
-    if (data.blinkStrength > 0) {
-        NSLog(@"Ultra SOU!");
-        [_auidoIntro stop];
-        _auidoIntro.currentTime = 0;
-        [_auidoIntro play];
-    }
-    
     if (data.roll > 8 && isVertival) {
-        isVertival = false;
-        [_auidoIntro stop];
-        _auidoIntro.currentTime = 0;
-        [_auidoIntro play];
+        [self playBGM];
+        
     } else if (data.roll < 0) {
         isVertival = true;
-        if ([_auidoIntro isPlaying]) {
-            //            NSTimeInterval score = _auidoIntro.currentTime;
-            //            NSLog(@"score %d");
-            
-            [_auidoIntro stop];
-            
-            _audioHai.currentTime = 0;
-            [_audioHai play];
+        if (isMusicPlaying) {
+            [self stopBGM];
         }
     }
     

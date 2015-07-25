@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MEMELib/MEMELib.h>
+#import <AudioToolbox/AudioServices.h>
 #import <AVFoundation/AVFoundation.h>
+#import <MEMELib/MEMELib.h>
 
 #import "MQTTKit.h"
 
@@ -17,11 +18,19 @@
 @interface MMDataViewController : UITableViewController
 {
     bool isVertival;
+    bool isMusicPlaying;
+    
+    NSTimer *bgmTimer;
+    double gameTime;
+    NSDate *stdate;
 }
 - (void) memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
 
 @property (strong, nonatomic) AVAudioPlayer *auidoIntro;
 @property (strong, nonatomic) AVAudioPlayer *audioHai;
 @property (strong, nonatomic) UIView *debugView;
+@property (strong, nonatomic) UIImageView *backgroundView;
+
+@property BOOL shouldBeHidingStatusBar;
 
 @end
