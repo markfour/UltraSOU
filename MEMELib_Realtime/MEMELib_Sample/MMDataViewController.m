@@ -161,26 +161,26 @@
     
     if (_auidoIntro.currentTime == 0) {
         //BGMは既に再生済み
-        score = _auidoIntro.duration - (gameTime - _auidoIntro.duration);
+//        score = _auidoIntro.duration - (gameTime - _auidoIntro.duration);
+        score = gameTime - _auidoIntro.duration;
     } else {
         //BGMはまだ再生中
-        score = gameTime;
+        score = _auidoIntro.duration - gameTime;
     }
     
-    NSString *scoreStr = [NSString stringWithFormat:@"%.4f", score];
-    scoreStr = [scoreStr stringByReplacingOccurrencesOfString:@"." withString:@""];
+    NSString *scoreStr = [NSString stringWithFormat:@"%.10f", score];
+//    scoreStr = [scoreStr stringByReplacingOccurrencesOfString:@"." withString:@""];
     
     [self mqttSend:@"off"];
     
     [self displayRanking:scoreStr];
     
 //    NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
-//    NSLog(@"score %@", scoreStr);
+    NSLog(@"score %@", scoreStr);
 }
 
 - (void)displayRanking:(NSString *)score
 {
-    NSLog(@"displayRanking");
     WebViewController *vc = [[WebViewController alloc] init];
     NSString *url = [NSString stringWithFormat:@"%@%@", @"http://cef098l-ate-app000.c4sa.net/index_test.php?id=xxxxxx&score=", score];
     vc.rankingURL = url;
