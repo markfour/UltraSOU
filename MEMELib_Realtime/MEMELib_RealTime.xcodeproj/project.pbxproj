@@ -70,7 +70,6 @@
 
 /* Begin PBXFileReference section */
 		350F8B7C199B389A0020859E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		350F8B7D199B389A0020859E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		350F8B7E199B389A0020859E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		350F8B7F199B389A0020859E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		350F8B80199B389A0020859E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -188,15 +187,15 @@
 		35EEC0F91998BF6800E70760 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				35541A851AD2A488005C7FE0 /* MEMELib.framework */,
 				350F8B82199B389A0020859E /* Accounts.framework */,
 				350F8B7C199B389A0020859E /* AdSupport.framework */,
 				350F8B86199B389A0020859E /* AudioToolbox.framework */,
 				350F8B7E199B389A0020859E /* CFNetwork.framework */,
 				35EEC1321998BF8200E70760 /* CoreBluetooth.framework */,
 				350F8B88199B389A0020859E /* CoreGraphics.framework */,
-				350F8B7D199B389A0020859E /* CoreLocation.framework */,
+				350F8B84199B389A0020859E /* CoreLocation.framework */,
 				35EEC0FA1998BF6800E70760 /* Foundation.framework */,
+				35541A851AD2A488005C7FE0 /* MEMELib.framework */,
 				350F8B7F199B389A0020859E /* MobileCoreServices.framework */,
 				350F8B83199B389A0020859E /* Security.framework */,
 				350F8B85199B389A0020859E /* Social.framework */,
@@ -333,6 +332,7 @@
 				ORGANIZATIONNAME = "JINS MEME";
 				TargetAttributes = {
 					35EEC0F61998BF6800E70760 = {
+						DevelopmentTeam = L7ME6MQ64J;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -517,6 +517,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = MEMELib_RealTime;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,6 +540,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = MEMELib_RealTime;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
