@@ -9,6 +9,8 @@
 #import "MMDataViewController.h"
 #import "MMViewController.h"
 
+
+
 @interface MMDataViewController ()
 
 @property (nonatomic, strong) UIView    *indicatorView;
@@ -43,8 +45,9 @@
     _debugView = [[UIView alloc] init];
     _debugView.backgroundColor = [UIColor whiteColor];
     _debugView.alpha = 0.8;
-    [self.view addSubview:_debugView];
-    
+    if (SOUND_DEBUG == 1) {
+        [self.view addSubview:_debugView];
+    }
     {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [button addTarget:self action:@selector(mqttTest:) forControlEvents:UIControlEventTouchDown];
@@ -68,21 +71,27 @@
     }
     {
         NSBundle *mainBundle = [NSBundle mainBundle];
-        NSString *filePath = [mainBundle pathForResource:@"hi" ofType:@"mp3"];
+        NSString *filePath = [mainBundle pathForResource:@"us" ofType:@"mp3"];
         NSURL *fileUrl  = [NSURL fileURLWithPath:filePath];
-        
+        NSError* error = nil;
+        _audioIntro = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
+        [_audioIntro prepareToPlay];
+    }
+    {
+        NSBundle *mainBundle = [NSBundle mainBundle];
+        NSString *filePath = [mainBundle pathForResource:@"hey" ofType:@"mp3"];
+        NSURL *fileUrl  = [NSURL fileURLWithPath:filePath];
         NSError* error = nil;
         _audioHai = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
         [_audioHai prepareToPlay];
     }
     {
         NSBundle *mainBundle = [NSBundle mainBundle];
-        NSString *filePath = [mainBundle pathForResource:@"us" ofType:@"mp3"];
+        NSString *filePath = [mainBundle pathForResource:@"up_music" ofType:@"mp3"];
         NSURL *fileUrl  = [NSURL fileURLWithPath:filePath];
-        
         NSError* error = nil;
-        _auidoIntro = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
-        [_auidoIntro prepareToPlay];
+        _audioUpMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:fileUrl error:&error];
+        [_audioUpMusic prepareToPlay];
     }
     
     NSString *clientID = @"ultra-user";
@@ -91,19 +100,19 @@
     client.password = @"ultra-user";
     client.port = 16056;
     
-//    [client connectToHost:@"m01.mqtt.cloud.nifty.com"
-//        completionHandler:^(NSUInteger code) {
-//            if (code == ConnectionAccepted) {
-//                // when the client is connected, send a MQTT message
-//                [client publishString:publichString
-//                              toTopic:@"music"
-//                              withQos:AtMostOnce
-//                               retain:NO
-//                    completionHandler:^(int mid) {
-//                        NSLog(@"message has been delivered");
-//                    }];
-//            }
-//        }];
+    //    [client connectToHost:@"m01.mqtt.cloud.nifty.com"
+    //        completionHandler:^(NSUInteger code) {
+    //            if (code == ConnectionAccepted) {
+    //                // when the client is connected, send a MQTT message
+    //                [client publishString:publichString
+    //                              toTopic:@"music"
+    //                              withQos:AtMostOnce
+    //                               retain:NO
+    //                    completionHandler:^(int mid) {
+    //                        NSLog(@"message has been delivered");
+    //                    }];
+    //            }
+    //        }];
     
 }
 
@@ -128,13 +137,13 @@
 
 - (void)playBGM
 {
-    NSLog(@"Play BGM %f", _auidoIntro.duration);
+    NSLog(@"Play BGM %f", _audioIntro.duration);
     isVertival = false;
     
     isMusicPlaying = true;
-    [_auidoIntro stop];
-    _auidoIntro.currentTime = 0;
-    [_auidoIntro play];
+    [_audioIntro stop];
+    _audioIntro.currentTime = 0;
+    [_audioIntro play];
     
     [self mqttSend:@"on"];
     
@@ -153,22 +162,22 @@
 {
     isMusicPlaying = false;
     
-    [_auidoIntro stop];
+    [_audioIntro stop];
     
     [self hey];
     
     double score = 0;
     
-    if (_auidoIntro.currentTime == 0) {
+    if (_audioIntro.currentTime == 0) {
         //BGMは既に再生済み
-//        score = _auidoIntro.duration - (gameTime - _auidoIntro.duration);
-        score = gameTime - _auidoIntro.duration;
+        //        score = _auidoIntro.duration - (gameTime - _auidoIntro.duration);
+        score = gameTime - _audioIntro.duration;
     } else {
         //BGMはまだ再生中
-        score = _auidoIntro.duration - gameTime;
+        score = _audioIntro.duration - gameTime;
     }
     
-    NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
+    NSLog(@"@%.4f - @%.4f", _audioIntro.currentTime, gameTime);
     if (score < 0) {
         //デバッグ時にはスコアを表示しない
     } else {
@@ -176,7 +185,7 @@
         NSLog(@"score %@", scoreStr);
         [self displayRanking:scoreStr];
     }
-
+    
     [self mqttSend:@"off"];
 }
 
@@ -226,10 +235,10 @@
             }
         }];
     
-//    [client disconnectWithCompletionHandler:^(NSUInteger code) {
-//        // The client is disconnected when this completion handler is called
-//        NSLog(@"MQTT client is disconnected");
-//    }];
+    //    [client disconnectWithCompletionHandler:^(NSUInteger code) {
+    //        // The client is disconnected when this completion handler is called
+    //        NSLog(@"MQTT client is disconnected");
+    //    }];
 }
 
 - (IBAction)mqttTest:(id)sender{
@@ -264,7 +273,17 @@
     if (data.roll > 8 && isVertival) {
         [self playBGM];
         
+    } else if (data.roll < -8) {
+        if (!isMusicPlaying) {
+            if (![_audioUpMusic isPlaying]) {
+                _audioUpMusic.currentTime = 0;
+                [_audioUpMusic play];
+            }
+        }
+        
     } else if (data.roll < 0) {
+        [_audioUpMusic stop];
+        
         isVertival = true;
         if (isMusicPlaying) {
             [self stopBGM];

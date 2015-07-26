@@ -14,6 +14,8 @@
 #import "MQTTKit.h"
 #import "WebViewController.h"
 
+#define SOUND_DEBUG 1
+
 @class MMViewController;
 
 @interface MMDataViewController : UITableViewController
@@ -29,8 +31,9 @@
 }
 - (void) memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
 
-@property (strong, nonatomic) AVAudioPlayer *auidoIntro;
+@property (strong, nonatomic) AVAudioPlayer *audioIntro;
 @property (strong, nonatomic) AVAudioPlayer *audioHai;
+@property (strong, nonatomic) AVAudioPlayer *audioUpMusic;
 @property (strong, nonatomic) UIView *debugView;
 @property (strong, nonatomic) UIButton *debugCloseButton;
 @property (strong, nonatomic) UIImageView *backgroundView;
