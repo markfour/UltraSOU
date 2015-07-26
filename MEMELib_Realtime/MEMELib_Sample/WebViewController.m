@@ -17,11 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"WebViewController viewDidLoad");
-    
     _rankingView = [[UIWebView alloc] init];
     _rankingView.frame = self.view.frame;
-//    _rankingView.delegate = self;
+    _rankingView.delegate = self;
 //    _rankingView.scalesPageToFit = YES;
     [self.view addSubview:_rankingView];
     
@@ -29,13 +27,13 @@
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [_rankingView loadRequest:req];
     
-//    _loadView = [[UIActivityIndicatorView alloc] init];
-//    _loadView.frame = CGRectMake(0, 0, 44, 44);
-//    _loadView.center = CGPointMake(160, 1136/4);
-//    _loadView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-//    [self.view addSubview:_loadView];
-//    [_loadView startAnimating];
-    
+    _indicatorView = [[UIActivityIndicatorView alloc] init];
+    _indicatorView.frame = CGRectMake(0, 0, 44, 44);
+    _indicatorView.center = CGPointMake(160, 1136/4);
+    _indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    [self.view addSubview:_indicatorView];
+    [_indicatorView startAnimating];
+
     {
         _debugCloseButton = [UIButton buttonWithType:UIButtonTypeSystem];
         [_debugCloseButton addTarget:self action:@selector(dismissRanking) forControlEvents:UIControlEventTouchDown];
@@ -53,13 +51,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView*)webView
 {
-//    [_loadView stopAnimating];
-//    _loadView.hidden = YES;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [_indicatorView stopAnimating];
+    _indicatorView.hidden = YES;
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -73,19 +66,10 @@
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
-- (void)loadRanking:(NSString *)url
-{
-
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

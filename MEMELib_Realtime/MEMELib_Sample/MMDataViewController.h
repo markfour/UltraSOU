@@ -34,7 +34,6 @@
 @property (strong, nonatomic) UIView *debugView;
 @property (strong, nonatomic) UIButton *debugCloseButton;
 @property (strong, nonatomic) UIImageView *backgroundView;
-//@property (strong, nonatomic) WebViewController *rankingView;
 
 @property BOOL shouldBeHidingStatusBar;
 

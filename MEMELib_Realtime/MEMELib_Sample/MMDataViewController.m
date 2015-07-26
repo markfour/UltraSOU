@@ -46,35 +46,26 @@
     [self.view addSubview:_debugView];
     
     {
-        UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [nextButton addTarget:self action:@selector(mqttTest:) forControlEvents:UIControlEventTouchDown];
-        [nextButton setTitle:@"MQTT" forState:UIControlStateNormal];
-        nextButton.frame = CGRectMake(0, 0, 160, 44);
-        [_debugView addSubview:nextButton];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [button addTarget:self action:@selector(mqttTest:) forControlEvents:UIControlEventTouchDown];
+        [button setTitle:@"MQTT" forState:UIControlStateNormal];
+        button.frame = CGRectMake(0, 0, 160, 44);
+        [_debugView addSubview:button];
     }
     {
-        UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [nextButton addTarget:self action:@selector(playBGM) forControlEvents:UIControlEventTouchDown];
-        [nextButton setTitle:@"Play Sound" forState:UIControlStateNormal];
-        nextButton.frame = CGRectMake(0, 44, 160, 44);
-        [_debugView addSubview:nextButton];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        [button addTarget:self action:@selector(playBGM) forControlEvents:UIControlEventTouchDown];
+        [button setTitle:@"Play Sound" forState:UIControlStateNormal];
+        button.frame = CGRectMake(0, 44, 160, 44);
+        [_debugView addSubview:button];
     }
     {
-        UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [nextButton addTarget:self action:@selector(stopBGM) forControlEvents:UIControlEventTouchDown];
-        [nextButton setTitle:@"Stop Sound" forState:UIControlStateNormal];
-        nextButton.frame = CGRectMake(0, 88, 160, 44);
-        [_debugView addSubview:nextButton];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        [button addTarget:self action:@selector(stopBGM) forControlEvents:UIControlEventTouchDown];
+        [button setTitle:@"Stop Sound" forState:UIControlStateNormal];
+        button.frame = CGRectMake(0, 88, 160, 44);
+        [_debugView addSubview:button];
     }
-    {
-//        _debugCloseButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//        [_debugCloseButton addTarget:self action:@selector(dismissRanking) forControlEvents:UIControlEventTouchDown];
-//        [_debugCloseButton setTitle:@"xxxxxxxxxxxx" forState:UIControlStateNormal];
-//        _debugCloseButton.frame = CGRectMake(0, 0, 320, 88);
-//        [self.view addSubview:_debugCloseButton];
-    }
-    
-    
     {
         NSBundle *mainBundle = [NSBundle mainBundle];
         NSString *filePath = [mainBundle pathForResource:@"hi" ofType:@"mp3"];
