@@ -39,7 +39,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView: self.indicatorView];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: @"Disconnect" style:UIBarButtonItemStylePlain target: self action:@selector(disconnectButtonPressed:)];
     
-    _backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tutorial.jpg"]];
+    _backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tutorial.png"]];
     [self.view addSubview:_backgroundView];
     
     _debugView = [[UIView alloc] init];

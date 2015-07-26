@@ -52,7 +52,7 @@
 		C4B72CE01B646FE700EFE8D7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B72CDF1B646FE700EFE8D7 /* WebViewController.m */; };
 		C4B72CE21B64950800EFE8D7 /* hey.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4B72CE11B64950800EFE8D7 /* hey.mp3 */; };
 		C4B72CE41B649C5C00EFE8D7 /* up_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4B72CE31B649C5C00EFE8D7 /* up_music.mp3 */; };
-		C4EF84F21B63A44C00CEC244 /* tutorial.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4EF84F11B63A44C00CEC244 /* tutorial.jpg */; };
+		C4B72CE61B64A04700EFE8D7 /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B72CE51B64A04700EFE8D7 /* tutorial.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -140,7 +140,7 @@
 		C4B72CDF1B646FE700EFE8D7 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C4B72CE11B64950800EFE8D7 /* hey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hey.mp3; sourceTree = "<group>"; };
 		C4B72CE31B649C5C00EFE8D7 /* up_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = up_music.mp3; sourceTree = "<group>"; };
-		C4EF84F11B63A44C00CEC244 /* tutorial.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutorial.jpg; sourceTree = "<group>"; };
+		C4B72CE51B64A04700EFE8D7 /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tutorial.png; path = ../../../../../Downloads/tutorial.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +215,6 @@
 		35EEC1001998BF6800E70760 /* MEMELib_Sample */ = {
 			isa = PBXGroup;
 			children = (
-				C4B72CE31B649C5C00EFE8D7 /* up_music.mp3 */,
 				C4B72CE11B64950800EFE8D7 /* hey.mp3 */,
 				35EEC1121998BF6800E70760 /* Images.xcassets */,
 				35EEC10C1998BF6800E70760 /* Main.storyboard */,
@@ -227,7 +226,8 @@
 				35EEC1101998BF6800E70760 /* MMViewController.m */,
 				C4433BAE1B639A1100426D50 /* MQTTKit */,
 				35EEC1011998BF6800E70760 /* Supporting Files */,
-				C4EF84F11B63A44C00CEC244 /* tutorial.jpg */,
+				C4B72CE51B64A04700EFE8D7 /* tutorial.png */,
+				C4B72CE31B649C5C00EFE8D7 /* up_music.mp3 */,
 				C4433BE61B63A07400426D50 /* us.mp3 */,
 				C4B72CDE1B646FE700EFE8D7 /* WebViewController.h */,
 				C4B72CDF1B646FE700EFE8D7 /* WebViewController.m */,
@@ -368,9 +368,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4433BE81B63A07400426D50 /* us.mp3 in Resources */,
-				C4EF84F21B63A44C00CEC244 /* tutorial.jpg in Resources */,
 				C4B72CE21B64950800EFE8D7 /* hey.mp3 in Resources */,
 				35EEC1131998BF6800E70760 /* Images.xcassets in Resources */,
+				C4B72CE61B64A04700EFE8D7 /* tutorial.png in Resources */,
 				35EEC1051998BF6800E70760 /* InfoPlist.strings in Resources */,
 				C4433BE21B639A1100426D50 /* LICENSE in Resources */,
 				35EEC10E1998BF6800E70760 /* Main.storyboard in Resources */,
