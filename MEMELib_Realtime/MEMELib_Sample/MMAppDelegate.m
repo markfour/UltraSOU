@@ -16,8 +16,8 @@
 #warning You have to set your own application ID and client secret
     // Setting Application ID and Client Secret
 //    [MEMELib setAppClientId:@"YOUR APPLICATION ID" clientSecret:@"YOUR CLIENT SECRET"];
-    [MEMELib setAppClientId:@"785658706730569" clientSecret:@"sr4w4lwktty5csyi0rqwxo6vjirtr64u"];
-    
+//    [MEMELib setAppClientId:@"785658706730569" clientSecret:@"sr4w4lwktty5csyi0rqwxo6vjirtr64u"];
+    [MEMELib setAppClientId:@"747606297997826" clientSecret:@"ekwprn6cwgkdw22px2yqrqevqjwgxt86"];
     return YES;
 }
 							
