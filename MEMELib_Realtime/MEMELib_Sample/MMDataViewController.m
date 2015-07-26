@@ -192,7 +192,7 @@
 - (void)displayRanking:(NSString *)score
 {
     WebViewController *vc = [[WebViewController alloc] init];
-    NSString *url = [NSString stringWithFormat:@"%@%@", @"http://cef098l-ate-app000.c4sa.net/index_test.php?id=xxxxxx&score=", score];
+    NSString *url = [NSString stringWithFormat:@"%@%@", @"http://cef098l-ate-app000.c4sa.net/index_test.php?id=iOS man&score=", score];
     vc.rankingURL = url;
     [self presentViewController:vc animated:YES completion:nil];
 }
@@ -273,15 +273,7 @@
     if (data.roll > 8 && isVertival) {
         [self playBGM];
         
-    } else if (data.roll < -8) {
-        if (!isMusicPlaying) {
-            if (![_audioUpMusic isPlaying]) {
-                _audioUpMusic.currentTime = 0;
-                [_audioUpMusic play];
-            }
-        }
-        
-    } else if (data.roll < 0) {
+    } else if (data.roll < 3) {
         [_audioUpMusic stop];
         
         isVertival = true;

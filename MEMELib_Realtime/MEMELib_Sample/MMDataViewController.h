@@ -14,7 +14,7 @@
 #import "MQTTKit.h"
 #import "WebViewController.h"
 
-#define SOUND_DEBUG 1
+#define SOUND_DEBUG 0
 
 @class MMViewController;
 
