@@ -192,7 +192,7 @@
 - (void)displayRanking:(NSString *)score
 {
     WebViewController *vc = [[WebViewController alloc] init];
-    NSString *url = [NSString stringWithFormat:@"%@%@", @"http://cef098l-ate-app000.c4sa.net/index_test.php?id=iOS man&score=", score];
+    NSString *url = [NSString stringWithFormat:@"%@%@", @"http://cef098l-ate-app000.c4sa.net/index_test.php?id=iOSman&score=", score];
     vc.rankingURL = url;
     [self presentViewController:vc animated:YES completion:nil];
 }

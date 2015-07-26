@@ -78,7 +78,7 @@
 
 - (IBAction)scanButtonPressed:(id)sender {
     // Start Scanning
-    [_peripheralsFound removeAllObjects];
+//    [_peripheralsFound removeAllObjects];
     
     MEMEStatus status = [[MEMELib sharedInstance] startScanningPeripherals];
     [self checkMEMEStatus: status];
@@ -93,11 +93,11 @@
 //    NSLog(@"peripheral found %@", [peripheral.identifier UUIDString]);
     [self.peripheralListTableView reloadData];
     
-    if ([[peripheral.identifier UUIDString] isEqualToString:@"D32FB8FC-3EBF-639D-C664-8DD0C19CB6D6"]) {
-        NSLog(@"My device found start connect");
-        MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral];
-        [self checkMEMEStatus: status];
-    }
+//    if ([[peripheral.identifier UUIDString] isEqualToString:@"D32FB8FC-3EBF-639D-C664-8DD0C19CB6D6"]) {
+//        NSLog(@"My device found start connect");
+//        MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral];
+//        [self checkMEMEStatus: status];
+//    }
 }
 
 - (void) memePeripheralConnected: (CBPeripheral *)peripheral
