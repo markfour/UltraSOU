@@ -50,6 +50,7 @@
 		C4433BE41B639A1100426D50 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C4433BD21B639A1100426D50 /* README.md */; };
 		C4433BE71B63A07400426D50 /* hi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433BE51B63A07400426D50 /* hi.mp3 */; };
 		C4433BE81B63A07400426D50 /* us.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C4433BE61B63A07400426D50 /* us.mp3 */; };
+		C4B72CE01B646FE700EFE8D7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B72CDF1B646FE700EFE8D7 /* WebViewController.m */; };
 		C4EF84F21B63A44C00CEC244 /* tutorial.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4EF84F11B63A44C00CEC244 /* tutorial.jpg */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,8 @@
 		C4433BD21B639A1100426D50 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4433BE51B63A07400426D50 /* hi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hi.mp3; sourceTree = "<group>"; };
 		C4433BE61B63A07400426D50 /* us.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = us.mp3; sourceTree = "<group>"; };
+		C4B72CDE1B646FE700EFE8D7 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		C4B72CDF1B646FE700EFE8D7 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		C4EF84F11B63A44C00CEC244 /* tutorial.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tutorial.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +227,8 @@
 				35EEC1011998BF6800E70760 /* Supporting Files */,
 				C4EF84F11B63A44C00CEC244 /* tutorial.jpg */,
 				C4433BE61B63A07400426D50 /* us.mp3 */,
+				C4B72CDE1B646FE700EFE8D7 /* WebViewController.h */,
+				C4B72CDF1B646FE700EFE8D7 /* WebViewController.m */,
 			);
 			path = MEMELib_Sample;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				35EEC1111998BF6800E70760 /* MMViewController.m in Sources */,
 				C4433BD51B639A1100426D50 /* messages_mosq.c in Sources */,
 				C4433BD71B639A1100426D50 /* net_mosq.c in Sources */,
+				C4B72CE01B646FE700EFE8D7 /* WebViewController.m in Sources */,
 				C4433BD41B639A1100426D50 /* memory_mosq.c in Sources */,
 				C4433BDE1B639A1100426D50 /* time_mosq.c in Sources */,
 				C4433BE31B639A1100426D50 /* MQTTKit.m in Sources */,

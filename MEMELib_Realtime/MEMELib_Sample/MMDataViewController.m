@@ -66,6 +66,14 @@
         nextButton.frame = CGRectMake(0, 88, 160, 44);
         [_debugView addSubview:nextButton];
     }
+    {
+        _debugCloseButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_debugCloseButton addTarget:self action:@selector(dismissRanking) forControlEvents:UIControlEventTouchDown];
+        [_debugCloseButton setTitle:@"xxxxxxxxxxxx" forState:UIControlStateNormal];
+        _debugCloseButton.frame = CGRectMake(0, 0, 320, 88);
+//        [self.view addSubview:_debugCloseButton];
+    }
+    
     
     {
         NSBundle *mainBundle = [NSBundle mainBundle];
@@ -122,16 +130,9 @@
     [self.view bringSubviewToFront:_debugView];
 }
 
-
-- (BOOL)prefersStatusBarHidden
+- (void)webViewDidFinishLoad:(UIWebView*)webView
 {
-    return self.shouldBeHidingStatusBar;
-}
-
-- (IBAction)hideStatusBar
-{
-    self.shouldBeHidingStatusBar = YES;
-    [self setNeedsStatusBarAppearanceUpdate];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)playBGM
@@ -180,15 +181,22 @@
     
     [self mqttSend:@"off"];
     
-    [self displayRanking];
+    [self displayRanking:scoreStr];
     
-    NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
-    NSLog(@"score %@", scoreStr);
+//    NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
+//    NSLog(@"score %@", scoreStr);
 }
 
-- (void)displayRanking
+- (void)displayRanking:(NSString *)score
 {
-    //TODO ここにUIWebViewをモーダルビューで表示させる
+    WebViewController *vc = [[WebViewController alloc] init];
+    NSString *url = [NSString stringWithFormat:@"%@%@", @"http://cef098l-ate-app000.c4sa.net/index_test.php?id=xxxxxx&score=", score];
+    vc.rankingURL = url;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)dismissRanking {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)hey
@@ -384,5 +392,17 @@
     return cell;
 }
 
+#pragma mark
+
+- (BOOL)prefersStatusBarHidden
+{
+    return self.shouldBeHidingStatusBar;
+}
+
+- (IBAction)hideStatusBar
+{
+    self.shouldBeHidingStatusBar = YES;
+    [self setNeedsStatusBarAppearanceUpdate];
+}
 
 @end

@@ -31,6 +31,8 @@
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
     _debugView = [[UIView alloc] init];
+    _debugView.backgroundColor = [UIColor grayColor];
+    _debugView.alpha = 0.8;
     [self.view addSubview:_debugView];
     
     UIActivityIndicatorView *ai = [[UIActivityIndicatorView alloc] init];
@@ -42,7 +44,7 @@
     UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [nextButton addTarget:self action:@selector(nextButtonTap:) forControlEvents:UIControlEventTouchDown];
     [nextButton setTitle:@"Next" forState:UIControlStateNormal];
-    nextButton.frame = CGRectMake(0, 44, 160, 44);
+    nextButton.frame = CGRectMake(0, 44, 320, 44);
     [_debugView addSubview:nextButton];
     
     [[MEMELib sharedInstance] disconnectPeripheral];
