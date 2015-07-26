@@ -13,7 +13,7 @@
 @property (retain, nonatomic) NSString *rankingURL;
 @property (retain, nonatomic) UIWebView *rankingView;
 @property (retain, nonatomic) UIButton *debugCloseButton;
-@property (retain, nonatomic) UIActivityIndicatorView *loadView;
+//@property (retain, nonatomic) UIActivityIndicatorView *loadView;
 
 @property BOOL shouldBeHidingStatusBar;
 

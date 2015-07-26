@@ -67,10 +67,10 @@
         [_debugView addSubview:nextButton];
     }
     {
-        _debugCloseButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_debugCloseButton addTarget:self action:@selector(dismissRanking) forControlEvents:UIControlEventTouchDown];
-        [_debugCloseButton setTitle:@"xxxxxxxxxxxx" forState:UIControlStateNormal];
-        _debugCloseButton.frame = CGRectMake(0, 0, 320, 88);
+//        _debugCloseButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//        [_debugCloseButton addTarget:self action:@selector(dismissRanking) forControlEvents:UIControlEventTouchDown];
+//        [_debugCloseButton setTitle:@"xxxxxxxxxxxx" forState:UIControlStateNormal];
+//        _debugCloseButton.frame = CGRectMake(0, 0, 320, 88);
 //        [self.view addSubview:_debugCloseButton];
     }
     
@@ -189,15 +189,16 @@
 
 - (void)displayRanking:(NSString *)score
 {
+    NSLog(@"displayRanking");
     WebViewController *vc = [[WebViewController alloc] init];
     NSString *url = [NSString stringWithFormat:@"%@%@", @"http://cef098l-ate-app000.c4sa.net/index_test.php?id=xxxxxx&score=", score];
     vc.rankingURL = url;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)dismissRanking {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//- (void)dismissRanking {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 - (void)hey
 {

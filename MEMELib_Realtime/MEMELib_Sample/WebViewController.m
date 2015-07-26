@@ -17,9 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSLog(@"WebViewController viewDidLoad");
+    
     _rankingView = [[UIWebView alloc] init];
     _rankingView.frame = self.view.frame;
-    _rankingView.delegate = self;
+//    _rankingView.delegate = self;
 //    _rankingView.scalesPageToFit = YES;
     [self.view addSubview:_rankingView];
     
@@ -27,12 +29,12 @@
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     [_rankingView loadRequest:req];
     
-    _loadView = [[UIActivityIndicatorView alloc] init];
-    _loadView.frame = CGRectMake(0, 0, 44, 44);
-    _loadView.center = CGPointMake(160, 1136/4);
-    _loadView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    [self.view addSubview:_loadView];
-    [_loadView startAnimating];
+//    _loadView = [[UIActivityIndicatorView alloc] init];
+//    _loadView.frame = CGRectMake(0, 0, 44, 44);
+//    _loadView.center = CGPointMake(160, 1136/4);
+//    _loadView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+//    [self.view addSubview:_loadView];
+//    [_loadView startAnimating];
     
     {
         _debugCloseButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -44,15 +46,15 @@
     
     [self hideStatusBar];
 }
-
+//
 - (void)dismissRanking {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView*)webView
 {
-    [_loadView stopAnimating];
-    _loadView.hidden = YES;
+//    [_loadView stopAnimating];
+//    _loadView.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,7 +77,7 @@
 {
 
 }
-    
+
 /*
 #pragma mark - Navigation
 
