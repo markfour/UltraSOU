@@ -23,6 +23,8 @@
     NSTimer *bgmTimer;
     double gameTime;
     NSDate *stdate;
+    
+    MQTTClient *client;
 }
 - (void) memeRealTimeModeDataReceived: (MEMERealTimeData *)data;
 

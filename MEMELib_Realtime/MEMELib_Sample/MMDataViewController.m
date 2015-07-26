@@ -86,6 +86,25 @@
         [_auidoIntro prepareToPlay];
     }
     
+    NSString *clientID = @"ultra-user";
+    client = [[MQTTClient alloc] initWithClientId:clientID];
+    client.username = @"ultra-user";
+    client.password = @"ultra-user";
+    client.port = 16056;
+    
+//    [client connectToHost:@"m01.mqtt.cloud.nifty.com"
+//        completionHandler:^(NSUInteger code) {
+//            if (code == ConnectionAccepted) {
+//                // when the client is connected, send a MQTT message
+//                [client publishString:publichString
+//                              toTopic:@"music"
+//                              withQos:AtMostOnce
+//                               retain:NO
+//                    completionHandler:^(int mid) {
+//                        NSLog(@"message has been delivered");
+//                    }];
+//            }
+//        }];
     
 }
 
@@ -125,7 +144,7 @@
     _auidoIntro.currentTime = 0;
     [_auidoIntro play];
     
-    [self mqtt:@"on"];
+    [self mqttSend:@"on"];
     
     bgmTimer = [NSTimer
                 scheduledTimerWithTimeInterval:0.01
@@ -159,13 +178,15 @@
     NSString *scoreStr = [NSString stringWithFormat:@"%.4f", score];
     scoreStr = [scoreStr stringByReplacingOccurrencesOfString:@"." withString:@""];
     
-    [self mqtt:@"off"];
+    [self mqttSend:@"off"];
+    
+    [self displayRanking];
     
     NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
     NSLog(@"score %@", scoreStr);
 }
 
-- (void)showRanking
+- (void)displayRanking
 {
     //TODO ここにUIWebViewをモーダルビューで表示させる
 }
@@ -191,19 +212,9 @@
     }
 }
 
-- (void)mqtt:(NSString *)publichString {
+- (void)mqttSend:(NSString *)publichString {
     // create the client with a unique client ID
     
-    //TODO remove
-    return;
-    
-    NSString *clientID = @"ultra-user";
-    MQTTClient *client = [[MQTTClient alloc] initWithClientId:clientID];
-    client.username = @"ultra-user";
-    client.password = @"ultra-user";
-    client.port = 16056;
-    
-    // connect to the MQTT server
     [client connectToHost:@"m01.mqtt.cloud.nifty.com"
         completionHandler:^(NSUInteger code) {
             if (code == ConnectionAccepted) {
@@ -217,26 +228,15 @@
                     }];
             }
         }];
-    
-    [client setMessageHandler:^(MQTTMessage *message) {
-        NSLog(@"received message %@", message.payloadString);
-    }];
 }
 
 - (IBAction)mqttTest:(id)sender{
-    // create the client with a unique client ID
-    NSString *clientID = @"ultra-user";
-    MQTTClient *client = [[MQTTClient alloc] initWithClientId:clientID];
-    client.username = @"ultra-user";
-    client.password = @"ultra-user";
-    client.port = 16056;
-    
     // connect to the MQTT server
     [client connectToHost:@"m01.mqtt.cloud.nifty.com"
         completionHandler:^(NSUInteger code) {
             if (code == ConnectionAccepted) {
                 // when the client is connected, send a MQTT message
-                [client publishString:@"off"
+                [client publishString:@"on"
                               toTopic:@"music"
                               withQos:AtMostOnce
                                retain:NO
@@ -245,11 +245,6 @@
                     }];
             }
         }];
-    
-    [client setMessageHandler:^(MQTTMessage *message) {
-        //        NSString *text = [message.payloadString];
-        NSLog(@"received message %@", message.payloadString);
-    }];
 }
 
 - (void) disconnectButtonPressed:(id) sender
@@ -261,7 +256,7 @@
 {
     [self blinkIndicator];
     
-    NSLog(@"RealTime Data Received %@", [data description]);
+    //    NSLog(@"RealTime Data Received %@", [data description]);
     self.latestRealTimeData = data;
     
     if (data.roll > 8 && isVertival) {

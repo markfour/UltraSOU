@@ -45,7 +45,7 @@
     nextButton.frame = CGRectMake(0, 44, 160, 44);
     [_debugView addSubview:nextButton];
     
-    //    [[MEMELib sharedInstance] disconnectPeripheral];
+    [[MEMELib sharedInstance] disconnectPeripheral];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -88,10 +88,10 @@
 - (void) memePeripheralFound: (CBPeripheral *) peripheral;
 {
     [self.peripheralsFound addObject: peripheral];
-    NSLog(@"peripheral found %@", [peripheral.identifier UUIDString]);
+//    NSLog(@"peripheral found %@", [peripheral.identifier UUIDString]);
     [self.peripheralListTableView reloadData];
     
-    if ([[peripheral.identifier UUIDString] isEqualToString:@"4921DE8C-7037-C56E-8BA2-EA1050F368C8"]) {
+    if ([[peripheral.identifier UUIDString] isEqualToString:@"D32FB8FC-3EBF-639D-C664-8DD0C19CB6D6"]) {
         NSLog(@"My device found start connect");
         MEMEStatus status = [[MEMELib sharedInstance] connectPeripheral: peripheral];
         [self checkMEMEStatus: status];

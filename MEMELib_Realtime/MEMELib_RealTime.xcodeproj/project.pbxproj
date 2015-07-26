@@ -168,7 +168,6 @@
 		35EEC0EE1998BF6800E70760 = {
 			isa = PBXGroup;
 			children = (
-				35541A851AD2A488005C7FE0 /* MEMELib.framework */,
 				35EEC1001998BF6800E70760 /* MEMELib_Sample */,
 				35EEC0F91998BF6800E70760 /* Frameworks */,
 				35EEC0F81998BF6800E70760 /* Products */,
@@ -186,6 +185,7 @@
 		35EEC0F91998BF6800E70760 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35541A851AD2A488005C7FE0 /* MEMELib.framework */,
 				350F8B82199B389A0020859E /* Accounts.framework */,
 				350F8B7C199B389A0020859E /* AdSupport.framework */,
 				350F8B86199B389A0020859E /* AudioToolbox.framework */,
