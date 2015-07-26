@@ -168,15 +168,16 @@
         score = _auidoIntro.duration - gameTime;
     }
     
-    NSString *scoreStr = [NSString stringWithFormat:@"%.10f", score];
-//    scoreStr = [scoreStr stringByReplacingOccurrencesOfString:@"." withString:@""];
-    
+    NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
+    if (score < 0) {
+        //デバッグ時にはスコアを表示しない
+    } else {
+        NSString *scoreStr = [NSString stringWithFormat:@"%.10f", score];
+        NSLog(@"score %@", scoreStr);
+        [self displayRanking:scoreStr];
+    }
+
     [self mqttSend:@"off"];
-    
-    [self displayRanking:scoreStr];
-    
-//    NSLog(@"@%.4f - @%.4f", _auidoIntro.currentTime, gameTime);
-    NSLog(@"score %@", scoreStr);
 }
 
 - (void)displayRanking:(NSString *)score
@@ -186,10 +187,6 @@
     vc.rankingURL = url;
     [self presentViewController:vc animated:YES completion:nil];
 }
-
-//- (void)dismissRanking {
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//}
 
 - (void)hey
 {
@@ -228,6 +225,11 @@
                     }];
             }
         }];
+    
+//    [client disconnectWithCompletionHandler:^(NSUInteger code) {
+//        // The client is disconnected when this completion handler is called
+//        NSLog(@"MQTT client is disconnected");
+//    }];
 }
 
 - (IBAction)mqttTest:(id)sender{
